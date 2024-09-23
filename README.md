@@ -21,6 +21,11 @@
 2. Open the repo with a code editor
 3. Open the terminal
 4. Type ```npm i``` or ```npm install```
+5. Type ```npm run dev```
+6. "Optional":
+   - Fork the repository.
+   - Create a new branch and make your changes.
+   - Submit a pull request with a description of your changes.
 
 ## Bronnen
 
