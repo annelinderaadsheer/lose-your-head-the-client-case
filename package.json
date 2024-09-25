@@ -16,6 +16,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"save": "^2.9.0",
 		"wpapi": "^1.2.2"
 	}
 }
