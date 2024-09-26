@@ -8,7 +8,7 @@
     <article>
         <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
             <h3>{@html post.title.rendered}</h3>
-            <p>door {@html post.yoast_head_json.author}</p>
+            <p>door <strong>{@html post.yoast_head_json.author}</strong></p>
         </article>
     {/each}
     
@@ -18,12 +18,10 @@
 
 <style>
     article {
-        background-color: #f9f9f9;
-        max-width: 250px;
+        max-width: 260px;
         margin: 10px;
         height: 350px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border: 1px solid #7B7B7A;
+        border: 1.6px solid #7B7B7A;
     }
 
     article img {
