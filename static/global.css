@@ -1,0 +1,168 @@
+:root{
+    --font-main:  Inter, 'sans-serif';
+    --font-alt: Tiempos, 'Source serif 4';
+    --font-style: regular;
+    --font-size: 16px;
+    --font-size-small: 14px;
+    --line-height: 125%;
+    --font-style-ligth: light;
+    --line-height-small: 144%;
+    --font-style-bold: bold;
+    --font-style-italic: italic;
+    --font-style-extra-bold: extra-bold;
+}
+
+body{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+body bold{
+    font-style: var(--font-main);
+    font-style: var(--font-style-bold);
+    font-size: var(--font-size);
+    line-height: var(--line-height); 
+}
+
+body italic{
+    font-family: var(--font-main);
+    font-style: var(--font-style-italic);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+}
+
+body small{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: var(--font-size-small);
+    line-height: var(--line-height-small);
+}
+
+header{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: var(--font-size);
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+.kop-1{
+    font-family: var(--font-main);
+    font-style: var(--font-style-extra-bold);
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.kop-2{
+    font-family: var(--font-main);
+    font-style: var(--font-style-bold);
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.kop-3{
+    font-family: var(--font-main);
+    font-style: var(--font-style-extra-bold);
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: -1%;
+}
+
+.kop-4{
+    font-family: var(--font-main);
+    font-style: var(--font-style-bold);
+    font-size: var(--font-size-small);
+    line-height: 150%;
+    letter-spacing: 2%;
+}
+
+.meta{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: 11px;
+    line-height: 140%;
+    letter-spacing: 10%;
+}
+
+.boven-kop{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: 12px;
+    line-height: 220%;
+    letter-spacing: 8%;
+}
+
+.artikel-kop{
+    font-family: var(--font-alt);
+    font-style: var(--font-style-bold);
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: -1%;
+}
+
+.introtekst{
+    font-family: var(--font-main);
+    font-style: var(--font-style-ligth);
+    font-size: 21px;
+    line-height: var(--line-height-small);
+    letter-spacing: -1%;
+}
+
+.tussenkop{
+    font-family: var(--font-main);
+    font-style: black;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.broodtekst{
+    font-family: var(--font-alt);
+    font-style: var(--font-style);
+    font-size: var(--font-size);
+    line-height: 170%;
+}
+
+.broodtekst-italic{
+    font-family: var(--font-alt);
+    font-style: var(--font-style-italic);
+    font-size: var(--font-size);
+    line-height: 170%;
+}
+
+.uitgelicht{
+    font-family: var(--font-alt);
+    font-style: var(--font-style-bold);
+    font-size: 38px;
+    line-height: 100%;
+}
+
+.menu-item{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: var(--font-size);
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+.slogan{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: var(--font-size);
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+.knop{
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: var(--font-size);
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+
+
+
+

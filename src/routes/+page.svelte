@@ -7,8 +7,6 @@
         day: 'numeric',
     };
     
-    // Check if the data has been received and is an array
-    console.log("Received data in +page.svelte:", data);
 </script>
 
 {#if data.posts}
