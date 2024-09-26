@@ -1,5 +1,6 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
+    import { scale } from 'svelte/transition';
 
     let year = new Date().getFullYear();
 
@@ -23,7 +24,7 @@
 <footer>
     <img src="/RedPers_Logo_Cmyk_Black.webp" alt="Red-Pers Logo" class="scaled-img">
     <ul class="footer-layout">
-        <li>
+        <li class="kopjes">
             <h3 class="kop-4">RUBRIEKEN</h3>
             <ul class="sub-list">
                 <li><a href="/">Binnenland</a></li>
@@ -37,7 +38,7 @@
             </ul>
         </li>
 
-        <li>
+        <li class="kopjes">
             <h3 class="kop-4">NAVIGATIE</h3>
             <ul class="sub-list">
                 <li><a href="/">Colofon</a></li>
@@ -48,7 +49,7 @@
             </ul>
         </li>
 
-        <li>
+        <li class="kopjes">
             <h3 class="kop-4">SERVICE</h3>
             <ul class="sub-list">
                 <li><a href="/">Tip de redactie</a></li>
@@ -56,7 +57,7 @@
             </ul>
         </li>
 
-        <li>
+        <li class="kopjes">
             <h3 class="kop-4">MEER RED PERS</h3>
             <ul class="sub-list">
                 <li><a href="/">Nieuwsbrief</a></li>
@@ -75,43 +76,75 @@
     </ul>
 
     <style>
-        .footer-layout {
-            display: flex;
-            justify-content: space-between;
+        .scaled-img{
+            padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto; 
+    max-width: 100%; 
+    max-height: 200px;
+    transform: scale(0.5);
+    transform-origin: top left;
+
+        }
+        footer {
+            width:100%;
+            background-color: #f5f5f5;
             padding: 20px;
         }
 
-        .footer-layout li {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin: 0 10px;
-        }
-
-        .kop-4 {
-            margin: 0;
-            padding: 10px 0;
-        }
-
-        .sub-list {
-            list-style: none;
+        .footer-layout{
+            list-style-type: none;
             padding: 0;
             margin: 0;
         }
 
-        .sub-list li {
-            margin: 5px 0;
+        .footer-layout h3{
+            padding: 0;
+            margin: 0;
         }
 
-        footer {
-            background-color: #f8f9fa;
-            padding: 200px;
+        .sub-list {
+            list-style: none;
+            padding-left: 20px;
         }
 
-        footer a{
+        .sub-list a{
             text-decoration: none;
-            color: black;
+            color: #333;
         }
+
+        .kopjes{
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 400px) and (max-width: 767px) {
+            .footer-layout{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Stijlen voor tablets in portretmodus */
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    /* Stijlen voor tablets in landschapsmodus en kleine laptops */
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+    /* Stijlen voor laptops en desktops */
+}
+
+@media (min-width: 1441px) {
+    /* Stijlen voor grote desktops */
+}
+
     </style>
 </footer>
 
