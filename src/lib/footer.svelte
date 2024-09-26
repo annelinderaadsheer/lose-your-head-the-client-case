@@ -1,6 +1,5 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
-    import { scale } from 'svelte/transition';
 
     let year = new Date().getFullYear();
 
@@ -14,15 +13,16 @@
     let interval;
 
     onMount(() => {
-        interval = setInterval(updateYear, 1000 * 60 * 60 * 24); // Check eens per dag
+        interval = setInterval(updateYear, 1000 * 60 * 60 * 24); // Update het jaar elke dag
     });
 
     onDestroy(() => {
         clearInterval(interval);
     });
 </script>
+
 <footer>
-    <img src="/RedPers_Logo_Cmyk_Black.webp" alt="Red-Pers Logo" class="scaled-img">
+    <img src="/RedPers_Logo_Cmyk_Black.webp" alt="Red Pers Logo">
     <ul class="footer-layout">
         <li class="kopjes">
             <h3 class="kop-4">RUBRIEKEN</h3>
@@ -68,40 +68,41 @@
             </ul>
         </li>
     </ul>
-    <p>© {year} Stichting Red Pers - Alle rechten voorbehouden</p>
-    <ul>
-        <li>Privacystatement</li>
-        <li>Cookiebeleid</li>
-        <li>Copyright</li>
-    </ul>
+    
+    <section class="end-footer">
+        <p>© {year} Stichting Red Pers - Alle rechten voorbehouden</p>
+        <ul class="end-footer-credits">
+            <li><a href="/">Privacystatement</a></li>
+            <li><a href="/">Cookiebeleid</a></li>
+            <li><a href="/">Copyright</a></li>
+        </ul>
+    </section>
 
     <style>
-        .scaled-img{
-            padding: 0;
-    margin: 0;
-    width: auto;
-    height: auto; 
-    max-width: 100%; 
-    max-height: 200px;
-    transform: scale(0.5);
-    transform-origin: top left;
-
-        }
         footer {
-            width:100%;
             background-color: #f5f5f5;
-            padding: 20px;
+            padding: 100px;
         }
 
-        .footer-layout{
+        footer img{
+            max-width: 200px;
+            max-height: 200px;
+            margin-bottom: 50px;
+        }
+
+        .footer-layout {
             list-style-type: none;
             padding: 0;
-            margin: 0;
+            margin: 0 0 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
-        .footer-layout h3{
+        .footer-layout h3 {
             padding: 0;
             margin: 0;
+            margin-bottom: 10px;
         }
 
         .sub-list {
@@ -109,42 +110,84 @@
             padding-left: 20px;
         }
 
-        .sub-list a{
+        .sub-list a {
             text-decoration: none;
             color: #333;
         }
 
-        .kopjes{
+        .sub-list li{
+            margin-left: -20px;
+        }
+
+        .kopjes {
             margin-bottom: 20px;
         }
 
+        .end-footer {
+            border-top: 1px solid #ccc;
+            display: flex;
+            margin-top: 75px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .end-footer-credits {
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .end-footer-credits li {
+            margin: 0;
+        }
+
+        .end-footer-credits a {
+            text-decoration: none;
+            color: #333;
+        }
+
         @media (min-width: 400px) and (max-width: 767px) {
-            .footer-layout{
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
+            .footer-layout {
+                padding: 10px;
             }
         }
 
-        @media (min-width: 481px) and (max-width: 767px) {
-}
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .footer-layout {
+                padding: 40px;
+            }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* Stijlen voor tablets in portretmodus */
-}
+            .end-footer-credits {
+                gap: 20px;
+            }
+        }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-    /* Stijlen voor tablets in landschapsmodus en kleine laptops */
-}
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            .footer-layout {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
 
-@media (min-width: 1281px) and (max-width: 1440px) {
-    /* Stijlen voor laptops en desktops */
-}
+            
 
-@media (min-width: 1441px) {
-    /* Stijlen voor grote desktops */
-}
+        }
 
+        @media (min-width: 1281px) and (max-width: 1440px) {
+            .footer-layout {
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+
+        }
+
+        @media (min-width: 1441px) {
+            .footer-layout {
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+
+        }
     </style>
 </footer>
-
