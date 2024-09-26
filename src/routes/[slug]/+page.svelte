@@ -11,7 +11,7 @@
     // Check if the data has been received and is an array
     console.log("Received data in +page.svelte:", data);
     const post = data.posts[0];
-    import Makerblok from '../components/Makerblok.svelte';
+    import Makersblok from '../components/Makersblok.svelte';
 </script>
 
 {#if post}
@@ -21,7 +21,7 @@
     <p>{@html post.excerpt.rendered}</p>
     <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
     <p>{@html post.content.rendered}</p>
-    <Makerblok post={post}></Makerblok>
+    <Makersblok author={post.authors[0]}></Makersblok>
 
 {:else}
     <!-- This will show if no posts are available -->
