@@ -23,7 +23,7 @@
         margin: 10px;
         height: 350px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        border: 1px solid #242424;
+        border: 1px solid #7B7B7A;
     }
 
     article img {
