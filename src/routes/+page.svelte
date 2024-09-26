@@ -6,6 +6,8 @@
         month: 'short',
         day: 'numeric',
     };
+
+    import Footer from '$lib/footer.svelte';
     
 </script>
 
@@ -25,3 +27,5 @@
     <!-- This will show if no posts are available -->
     <p>No posts available</p>
 {/if}
+
+<Footer />

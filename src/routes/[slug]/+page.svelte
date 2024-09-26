@@ -14,7 +14,6 @@
 </script>
 
 {#if post}
-    <!-- @html means: there is html in this string, render it -->
     <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
     <h3>{@html post.title.rendered}</h3> 
     <p>{@html post.excerpt.rendered}</p>
@@ -28,6 +27,7 @@
         <p>{post.authors[0].description}</p>
     </div>
 {:else}
-    <!-- This will show if no posts are available -->
     <p>No post available</p>
 {/if}
+
+
