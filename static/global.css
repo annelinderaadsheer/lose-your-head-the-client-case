@@ -10,13 +10,54 @@
     --font-style-bold: bold;
     --font-style-italic: italic;
     --font-style-extra-bold: extra-bold;
+
+    --background-color: #f7f7f5;
+    --article-background-color: #ffffff;
+    --img-text-background-color: #00000080;
+    --text-color: #000000;
+    --alt-text-color: #757575;
+    --light-border-color: #9b9b9b94;
+    --accent-color1: #D5302D;
+    --accent-color2: #f4a8a1;
+    --accent-color3: #f2d930;
+    --accent-color4: #5340e8;
+    --border-fieldset-focus: #005FCC;
+  
+    --thumbnail-width: 100%;
+    --thumbnail-height: 200px;
+    --thumbnail-heightsm: 150px;
+  
+    --border: solid var(--text-color) 1px;
+    --border-light: solid var(--light-border-color) 1px;
+    
+    --margin-center: 0 auto;
+  
+    --line-length: 75ch;
+    --line-heigth: 30px;
+  
+    --font-main: Tiempos, 'Source serif 4';
+    --font-alt: Inter, 'sans-serif';
 }
 
-body{
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0 15em;
     font-family: var(--font-main);
     font-style: var(--font-style);
     font-size: var(--font-size);
     line-height: var(--line-height);
+}
+  
+main {
+    max-width: 1240px;
+    margin: var(--margin-center);
+    margin-top: 6rem;
+}
+  
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 body bold{
