@@ -14,6 +14,7 @@
     --background-color: #f7f7f5;
     --article-background-color: #ffffff;
     --img-text-background-color: #00000080;
+    --button-background-color: lightgray;
     --text-color: #000000;
     --alt-text-color: #757575;
     --light-border-color: #9b9b9b94;
@@ -58,6 +59,15 @@ main {
 a {
     text-decoration: none;
     color: var(--text-color);
+}
+
+button, a.button {
+    color: var(--alt-text-color);
+    background-color: var(--button-background-color);
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
 }
 
 body bold{

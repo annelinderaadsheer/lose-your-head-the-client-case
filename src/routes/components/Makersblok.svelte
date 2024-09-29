@@ -5,7 +5,7 @@
 <div class="makersblok">
     <div class="profile">
         <img src={author.avatar_url} alt={author.display_name}>
-        <a href="/author/{author.slug}" class="hidden-on-mobile">Bekijk profiel</a>
+        <a href="/author/{author.slug}" class="button hidden-on-mobile">Bekijk profiel</a>
     </div>
     <article>
         <div>
@@ -13,7 +13,7 @@
             <p>{author.job_title}</p>
             <p class="hidden-on-mobile">{author.description}</p>
         </div>
-        <a href="/author/{author.slug}"  class="hidden-on-desktop">&gt;</a>
+        <a href="/author/{author.slug}" class="button hidden-on-desktop">&gt;</a>
     </article>
 
 </div>
@@ -22,18 +22,25 @@
     .makersblok {
         display: flex;
         align-items: center;
-        border: 1px solid black;
+        border: var(--border);
         max-width: 50em;
         padding: 1em;
+        margin-bottom: 1em;
     }
 
     .profile {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding: 1em;
+        gap: 1em;
+        padding-left: 1em;
+        padding-right: 2em;
         height: 100%;
-        max-width: 10em;
+        width: 10em;
+    }
+
+    img {
+        border-radius: 50%;
     }
 
     article {
@@ -43,18 +50,11 @@
         width: 100%;
     }
 
-    a {
-        text-decoration: none;
-        color: gray;
-        background-color: lightgray;
-        padding: 5px;
-    }
-
     .hidden-on-mobile {
         display: none;
     }
 
-    @media only screen and (min-width: 600px) {
+    @media only screen and (min-width: 750px) {
         .hidden-on-mobile {
             display: unset;
         }
