@@ -7,7 +7,7 @@
         day: 'numeric',
     };
 
-    import Footer from '$lib/footer.svelte';
+    import Footer from '$lib/Footer.svelte';
     
 </script>
 

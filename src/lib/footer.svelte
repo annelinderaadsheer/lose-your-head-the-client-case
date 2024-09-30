@@ -13,7 +13,7 @@
     let interval;
 
     onMount(() => {
-        interval = setInterval(updateYear, 1000 * 60 * 60 * 24); // Update het jaar elke dag
+        interval = setInterval(updateYear, 1000 * 60 * 60 * 24); 
     });
 
     onDestroy(() => {
