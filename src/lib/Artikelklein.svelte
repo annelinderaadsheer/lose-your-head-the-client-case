@@ -1,6 +1,6 @@
 <script>
     export let data;
-    export let numberOfPosts = 1;
+    export let numberOfPosts = 3;
 </script>
 
 {#if data.posts}

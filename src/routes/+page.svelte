@@ -7,7 +7,7 @@
         day: 'numeric',
     };
 
-    import ArtikelKlein from '$lib/artikel-klein.svelte';
+    import ArtikelKlein from '$lib/Artikelklein.svelte';
     
 </script>
 
