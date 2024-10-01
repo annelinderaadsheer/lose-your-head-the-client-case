@@ -42,7 +42,7 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 0 18vw;
+    margin: 0 8vw;
     font-family: var(--font-main);
     font-style: var(--font-style);
     font-size: var(--font-size);
