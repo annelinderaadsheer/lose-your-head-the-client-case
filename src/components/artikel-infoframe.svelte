@@ -11,7 +11,7 @@
 <article>
     <div class="summary">
         <p class="catagory bold">{post.yoast_head_json.schema["@graph"][0].articleSection[0]}</p>
-        <h1>{@html post.title.rendered}</h1>
+        <h1 class="artikel-kop">{@html post.title.rendered}</h1>
         {@html post.excerpt.rendered}
         <div class="author-and-read-time">
             <p>Door <span class="bold">{post.authors[0].display_name}</span></p>
@@ -31,7 +31,7 @@
         background-image: url('/ellipse.svg');
         background-repeat: no-repeat;
         background-size: 5000px 760px;
-        background-position: -2000px -380px;
+        background-position: -2000px -220px;
     }
 
     * {
@@ -43,6 +43,7 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-top: 2em;
     }
 
     .summary {
@@ -65,12 +66,14 @@
     .catagory {
         color: var(--accent-color1);
         text-transform: uppercase;
+        font-size: small;
     }
 
     @media only screen and (min-width: 960px) {
         article {
             flex-direction: row;
             gap: 2em;
+            margin-top: 4em;
         }
 
         * {
