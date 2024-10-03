@@ -1,51 +1,199 @@
 <script>
     export let data;
-     /** @type {import('./$types').PageData} */
-     const post = data.posts[0];
+    /** @type {import('./$types').PageData} */
+    const post = data.posts[0];
 </script>
 
 <header>
-<section class="boven">
-    <ul>
-        <li>Colofon</li>
-        <li>Over</li>
-        <li>Meedoen</li>
-        <li>Contact</li>
-    </ul>
-</section>
-<section class="midden">
-        <div class="datum">
-            {#if post}
-              <p>{post.date}</p> 
-            {/if}
-            <p>PODIUM VOOR DE JOURNALISTIEK </p>
-        </div>
-    <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="250" height="60">
-    <ul>
-        <li>Nieuwsbrief</li>
-        <li><button>DONEREN</button></li>
-        <li><img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20"></li>
-    </ul>
-    
-</section>
-<section class="onder">
-    <ul>
-        <li>Voorpagina</li>
-        <li>Binnenland</li>
-        <li>Buitenland</li>
-        <li>Colums</li>
-        <li>Economie</li>
-        <li>Kunst en Media</li>
-        <li>Podcast</li>
-        <li>Politiek</li>
-        <li>Wetenschap</li>
-    </ul>
-</section>
+    <div class="klein-scherm">
+        <section class="mobile-header">
+            <nav>
+                <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <li>Binnenland</li>
+                        <li>Buitenland</li>
+                        <li>Colums</li>
+                        <li>Economie</li>
+                        <li>Kunst en Media</li>
+                        <li>Podcast</li>
+                        <li>Politiek</li>
+                        <li>Wetenschap</li>
+                        <div class="boven-mobile">
+                        <li>Colofon</li>
+                <li>Over</li>
+                <li>Meedoen</li>
+                <li>Contact</li>
+            </div>
+                    </ul>
+                </div>
+            </nav>
+            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="150" height="35" />
+            <div class="mobile-search-icon">
+                <img src="/free-search-icon-2903-thumb.png" alt="Search" width="25" height="25" />
+            </div>
+        </section>
+
+        <section class="mobile-datum">
+            <div class="datum">
+                {#if post}
+                    <p>{post.date}</p>
+                {/if}
+                <p>PODIUM VOOR DE JOURNALISTIEK</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="groot-scherm">
+        <section class="boven">
+            <ul>
+                <li>Colofon</li>
+                <li>Over</li>
+                <li>Meedoen</li>
+                <li>Contact</li>
+            </ul>
+        </section>
+        <section class="midden">
+            <div class="datum">
+                {#if post}
+                    <p>{post.date}</p>
+                {/if}
+                <p>PODIUM VOOR DE JOURNALISTIEK</p>
+            </div>
+            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="250" height="60" />
+            <ul>
+                <li>Nieuwsbrief</li>
+                <li><button>DONEREN</button></li>
+                <li><img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" /></li>
+            </ul>
+        </section>
+        <section class="onder">
+            <ul>
+                <li>Voorpagina</li>
+                <li>Binnenland</li>
+                <li>Buitenland</li>
+                <li>Colums</li>
+                <li>Economie</li>
+                <li>Kunst en Media</li>
+                <li>Podcast</li>
+                <li>Politiek</li>
+                <li>Wetenschap</li>
+            </ul>
+        </section>
+    </div>
 </header>
 
 <style>
+    #menuToggle {
+        display: block;
+        position: relative;
+        top: 5px;
+        left: 10px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
 
-    .onder ul{
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0; 
+        z-index: 2; 
+        -webkit-touch-callout: none;
+    }
+
+    #menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        border-radius: 3px;
+        background-color: black;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                    opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #menu {
+        position: absolute;
+        width: 175px;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        outline: 1px solid black;
+        height: 500px;
+        padding-top: 125px;
+        background: #F7F7F5;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased; /* to stop flickering of text in Safari */
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    #menu li {
+        padding: 5px ;
+    }
+
+   .boven-mobile {
+    border-top: 1px solid rgba(154, 154, 154, 0.679);
+    font-size: smaller;
+    font-weight: bold;
+   }
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: 1px solid rgba(154, 154, 154, 0.679);
+    }
+
+    .mobile-datum {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: smaller;
+        border-bottom: 1px solid rgba(154, 154, 154, 0.679);
+    }
+
+    .onder ul {
         display: flex;
         align-items: center;
         padding: 15px;
@@ -55,37 +203,37 @@
         border-bottom: 1px solid rgb(60, 60, 60);
         border-top: 1px solid rgb(60, 60, 60);
     }
-    .midden{
+
+    .midden {
         display: flex;
         align-items: center;
         padding: 20px;
         justify-content: space-between;
     }
 
-    .midden ul{
+    .midden ul {
         display: flex; /* Flexbox toepassen op de ul om items naast elkaar te plaatsen */
-    list-style: none; /* Verwijdert de standaard bullet points */
-    margin: 0;
-    cursor: pointer;
-    padding: 0;
-    margin-left: 50px;
-    gap: 20px;
+        list-style: none; /* Verwijdert de standaard bullet points */
+        margin: 0;
+        cursor: pointer;
+        padding: 0;
+        margin-left: 50px;
+        gap: 20px;
     }
 
-    .datum p{
+    .datum p {
         margin: 0;
     }
 
-    button{
+    button {
         background-color: red;
         color: white;
         border: none;
         cursor: pointer;
         border-radius: 2px;
-
     }
-      
-    .boven{
+
+    .boven {
         background-color: black;
         display: flex;
         color: white;
@@ -93,21 +241,26 @@
     }
 
     .boven ul {
-    display: flex; /* Flexbox toepassen op de ul om items naast elkaar te plaatsen */
-    list-style: none; /* Verwijdert de standaard bullet points */
-    margin: 0;
-    cursor: pointer;
-    padding: 0;
-}
-
-.boven ul li {
-    padding: 15px;
-}
-
-@media screen and (max-width: 600px) {
-    .boven ul {
-        display: none;
+        display: flex;
+        list-style: none;
+        margin: 0;
+        cursor: pointer;
+        padding: 0;
     }
-}
 
+    .boven ul li {
+        padding: 15px;
+    }
+
+    @media (max-width: 786px) {
+        .groot-scherm {
+            display: none;
+        }
+    }
+
+    @media (min-width: 786px) {
+        .klein-scherm {
+            display: none;
+        }
+    }
 </style>
