@@ -1,5 +1,7 @@
 <script>
-    export let data:
+    export let data;
+     /** @type {import('./$types').PageData} */
+     const post = data.posts[0];
 </script>
 
 <header>
@@ -12,7 +14,12 @@
     </ul>
 </section>
 <section class="midden">
-    <div class="datum"></div>
+        <div class="datum">
+            {#if post}
+              <p>{post.date}</p> 
+            {/if}
+        </div>
+        <p>PODIUM VOOR DE JOURNALISTIEK </p>
     <img src="" alt="">
     <ul>
         <li>Nieuwsbrief</li>
