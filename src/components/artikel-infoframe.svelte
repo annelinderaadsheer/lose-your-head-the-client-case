@@ -10,7 +10,7 @@
 
 <article>
     <div class="summary">
-        <p class="catagory bold">{post.yoast_head_json.schema["@graph"][0].articleSection[0]}</p>
+        <p class="catagory bold">{@html post.yoast_head_json.schema["@graph"][0].articleSection[0]}</p>
         <h1 class="artikel-kop">{@html post.title.rendered}</h1>
         {@html post.excerpt.rendered}
         <div class="author-and-read-time">
@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="img-container">
-        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
+        <img width="850" height="400" src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
         <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
     </div>
 </article>
@@ -55,7 +55,6 @@
 
     img {
         width: 100%;
-        aspect-ratio: 85/50;
         object-fit: cover;
     }
 
