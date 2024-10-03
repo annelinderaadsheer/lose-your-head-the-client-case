@@ -25,15 +25,6 @@
 </article>
 
 <style>
-    :global(body) {
-        background-color: white;
-
-        background-image: url('/ellipse.svg');
-        background-repeat: no-repeat;
-        background-size: 5000px 760px;
-        background-position: -2000px -220px;
-    }
-
     * {
         text-align: center;
     }
