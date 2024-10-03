@@ -1,3 +1,7 @@
+<script>
+    export let data:
+</script>
+
 <header>
 <section class="boven">
     <ul>
