@@ -1,8 +1,9 @@
 <script>
     export let data;
-    export let numberOfPosts = 3;
+    export let numberOfPosts = 6;
 </script>
 
+<div class="artikelen">
 {#if data.posts}
     {#each data.posts.slice(0, numberOfPosts) as post}
     <a href="/" class="article-link" aria-label="">
@@ -12,13 +13,21 @@
             <p>door <strong>{@html post.yoast_head_json.author}</strong></p>
         </article>
     </a>
+
     {/each}
     
 {:else}
     <p>No posts available</p>
 {/if}
+</div>
 
 <style>
+
+    .artikelen{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
     .article-link {
         text-decoration: none; 
     }
