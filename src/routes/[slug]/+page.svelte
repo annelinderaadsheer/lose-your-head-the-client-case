@@ -1,24 +1,23 @@
 <script>
+    import ArtikelInfoframe from '../../components/artikel-infoframe.svelte';
+    import Header from '../../lib/Header.svelte';
+
     /** @type {import('./$types').PageData} */
     export let data;
-
-    const dateFormat = {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-    };
     
     // Check if the data has been received and is an array
     console.log("Received data in +page.svelte:", data);
     const post = data.posts[0];
 </script>
 
-{#if post}
+<Header data={data}/>
+
+<main>
+    {#if post}
+
+    <ArtikelInfoframe post={post}></ArtikelInfoframe>
     <!-- @html means: there is html in this string, render it -->
-    <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
-    <h3>{@html post.title.rendered}</h3> 
-    <p>{@html post.excerpt.rendered}</p>
-    <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
+
     <p>{@html post.content.rendered}</p>
 
     <div>
@@ -28,6 +27,22 @@
         <p>{post.authors[0].description}</p>
     </div>
 {:else}
-    <!-- This will show if no posts are available -->
     <p>No post available</p>
 {/if}
+</main>
+
+
+
+
+
+<!-- <style>
+    :global(body) {
+        background-color: white;
+
+        background-image: url('/ellipse.svg');
+        background-repeat: no-repeat;
+        background-size: 5000px 760px;
+        background-position: -2000px -220px;
+    }
+</style> -->
+
