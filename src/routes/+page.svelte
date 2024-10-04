@@ -2,7 +2,6 @@
     import Header from '../lib/Header.svelte';
       /** @type {import('./$types').PageData} */
       export let data;
-
 const dateFormat = {
     month: 'short',
     day: 'numeric',
@@ -11,4 +10,5 @@ const dateFormat = {
 </script>
 
 <Header data={data}/>
+
 
