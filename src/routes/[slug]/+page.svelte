@@ -1,5 +1,6 @@
 <script>
     import ArtikelInfoframe from '../../components/artikel-infoframe.svelte';
+    import Header from '../lib/Header.svelte';
 
     /** @type {import('./$types').PageData} */
     export let data;
@@ -8,6 +9,8 @@
     console.log("Received data in +page.svelte:", data);
     const post = data.posts[0];
 </script>
+
+<Header data={data}/>
 
 {#if post}
     <ArtikelInfoframe post={post}></ArtikelInfoframe>
