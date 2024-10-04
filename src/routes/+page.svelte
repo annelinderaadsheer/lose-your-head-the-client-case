@@ -24,7 +24,7 @@ import Header from '../lib/Header.svelte';
             <h3>{@html post.title.rendered}</h3>
         </a>
         <p>{@html post.excerpt.rendered}</p>
-        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding" width="100" height="100">
+        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
         <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
         <p>{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
         <p>{post.yoast_head_json.author}</p>
@@ -37,4 +37,8 @@ import Header from '../lib/Header.svelte';
 
 
 <Footer />
+
+<style>
+  
+</style>
 

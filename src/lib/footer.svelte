@@ -178,36 +178,36 @@
 
 @media (max-width: 400px) {
     footer {
-        padding: 10px; /* Reduced padding for very small screens */
+        padding: 10px; 
     }
 
     .footer-layout {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         align-items: center;
         gap: 15px;
     }
 
     .footer-layout h3 {
-        font-size: 16px; /* Smaller font size */
+        font-size: 16px; 
         margin-bottom: 5px;
     }
 
     footer img {
-        max-width: 100px; /* Smaller image size */
+        max-width: 100px;
         max-height: 100px;
         margin-bottom: 20px;
     }
 
     .end-footer {
-        flex-direction: column; /* Stack credits and items */
+        flex-direction: column; 
         align-items: center;
         gap: 10px;
-        margin-top: 20px; /* Reduced top margin */
+        margin-top: 20px; 
         padding-top: 10px;
     }
 
     .end-footer-credits {
-        flex-direction: column; /* Center credits vertically */
+        flex-direction: column; 
         align-items: center;
         gap: 5px;
     }
