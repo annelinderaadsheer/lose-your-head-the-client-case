@@ -42,8 +42,9 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    margin: 0 8vw;
+
     font-family: var(--font-main);
+    margin: 0;
     font-style: var(--font-style);
     font-size: var(--font-size);
     line-height: var(--line-height);
@@ -203,8 +204,3 @@ header{
     line-height: 100%;
     letter-spacing: -2%;
 }
-
-
-
-
-
