@@ -6,8 +6,10 @@
         month: 'short',
         day: 'numeric',
     };
-    
+    import Header from '../components/header-component.svelte';
 </script>
+
+<Header></Header>
 
 {#if data.posts}
     {#each data.posts as post}
