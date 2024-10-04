@@ -1,6 +1,8 @@
 <script>
     import ArtikelInfoframe from '../../components/artikel-infoframe.svelte';
     import Header from '../../lib/Header.svelte';
+    import ArtikelKlein from '$lib/Artikelklein.svelte';
+    import Footer from '$lib/Footer.svelte';
 
     /** @type {import('./$types').PageData} */
     export let data;
@@ -29,7 +31,12 @@
 {:else}
     <p>No post available</p>
 {/if}
+
+<ArtikelKlein data={data}/>
 </main>
+
+<Footer/>
+
 
 
 

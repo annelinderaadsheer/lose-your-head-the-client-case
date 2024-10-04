@@ -1,6 +1,6 @@
 <script>
     export let data;
-    export let numberOfPosts = 6;
+    export let numberOfPosts = 5;
 </script>
 
 <div class="artikelen">
