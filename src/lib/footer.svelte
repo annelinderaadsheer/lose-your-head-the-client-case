@@ -148,11 +148,6 @@
             color: #333;
         }
 
-        @media (min-width: 400px) and (max-width: 767px) {
-            .footer-layout {
-                padding: 10px;
-            }
-        }
 
         @media (min-width: 768px) and (max-width: 1024px) {
             .footer-layout {
