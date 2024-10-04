@@ -54,9 +54,7 @@ body {
 
 main {
     max-width: 1240px;
-    padding: 20px;
     margin: var(--margin-center);
-    margin-top: 6rem;
 }
   
 a {
