@@ -18,8 +18,8 @@
 
 <Header data={data}/>
 
-
-{#if data.posts}
+<main>
+    {#if data.posts}
     {#each data.posts as post}
     <!-- @html means: there is html in this string, render it -->
         <a href={post.slug}>
@@ -35,5 +35,7 @@
     <!-- This will show if no posts are available -->
     <p>No posts available</p>
 {/if}
+</main>
+
 
 <Footer />

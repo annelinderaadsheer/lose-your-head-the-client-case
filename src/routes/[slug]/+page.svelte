@@ -12,7 +12,8 @@
 
 <Header data={data}/>
 
-{#if post}
+<main>
+    {#if post}
 
     <ArtikelInfoframe post={post}></ArtikelInfoframe>
     <!-- @html means: there is html in this string, render it -->
@@ -28,11 +29,13 @@
 {:else}
     <p>No post available</p>
 {/if}
+</main>
 
 
 
 
-<style>
+
+<!-- <style>
     :global(body) {
         background-color: white;
 
@@ -41,5 +44,5 @@
         background-size: 5000px 760px;
         background-position: -2000px -220px;
     }
-</style>
+</style> -->
 

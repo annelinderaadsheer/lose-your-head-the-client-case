@@ -52,6 +52,12 @@ body {
     line-height: var(--line-height);
 }
 
+main {
+    max-width: 1240px;
+    padding: 20px;
+    margin: var(--margin-center);
+    margin-top: 6rem;
+}
   
 a {
     text-decoration: none;
