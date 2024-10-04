@@ -159,30 +159,59 @@
             }
         }
 
-        @media (min-width: 1025px) and (max-width: 1280px) {
-            .footer-layout {
-                padding-left: 100px;
-                padding-right: 100px;
-            }
+        footer {
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+}
 
-            
+@media (min-width: 768px) {
+    footer {
+        padding: 70px 40px;
+    }
+}
 
-        }
+@media (min-width: 1025px) {
+    footer {
+        padding: 100px;
+    }
+}
 
-        @media (min-width: 1281px) and (max-width: 1440px) {
-            .footer-layout {
-                padding-left: 150px;
-                padding-right: 150px;
-            }
+@media (max-width: 400px) {
+    footer {
+        padding: 10px; /* Reduced padding for very small screens */
+    }
 
-        }
+    .footer-layout {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        gap: 15px;
+    }
 
-        @media (min-width: 1441px) {
-            .footer-layout {
-                padding-left: 200px;
-                padding-right: 200px;
-            }
+    .footer-layout h3 {
+        font-size: 16px; /* Smaller font size */
+        margin-bottom: 5px;
+    }
 
-        }
+    footer img {
+        max-width: 100px; /* Smaller image size */
+        max-height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .end-footer {
+        flex-direction: column; /* Stack credits and items */
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px; /* Reduced top margin */
+        padding-top: 10px;
+    }
+
+    .end-footer-credits {
+        flex-direction: column; /* Center credits vertically */
+        align-items: center;
+        gap: 5px;
+    }
+}
+        
     </style>
 </footer>
