@@ -1,4 +1,15 @@
 <script>
+
+    /** @type {import('./$types').PageData} */
+    export let data;
+
+    const dateFormat = {
+        month: 'short',
+        day: 'numeric',
+    };
+
+    import Footer from '$lib/Footer.svelte';
+
     import Header from '../lib/Header.svelte';
       /** @type {import('./$types').PageData} */
       export let data;
@@ -6,6 +17,7 @@ const dateFormat = {
     month: 'short',
     day: 'numeric',
 };
+
     
 </script>
 
@@ -19,7 +31,7 @@ const dateFormat = {
             <h3>{@html post.title.rendered}</h3>
         </a>
         <p>{@html post.excerpt.rendered}</p>
-        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
+        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding" width="100" height="100">
         <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
         <p>{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
         <p>{post.yoast_head_json.author}</p>
@@ -28,3 +40,5 @@ const dateFormat = {
     <!-- This will show if no posts are available -->
     <p>No posts available</p>
 {/if}
+
+<Footer />
