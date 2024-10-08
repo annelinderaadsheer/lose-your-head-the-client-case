@@ -1,5 +1,3 @@
-<script>
-	import '/global.css?url'
-</script>
+<link rel="stylesheet" href="/global.css">
 
 <slot></slot>
