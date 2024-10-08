@@ -13,14 +13,14 @@
 </script>
 
 <Header data={data}/>
+<ArtikelInfoframe post={post}></ArtikelInfoframe>
 
 <main>
     {#if post}
-
-    <ArtikelInfoframe post={post}></ArtikelInfoframe>
     <!-- @html means: there is html in this string, render it -->
-
-    <p>{@html post.content.rendered}</p>
+    <article>
+        <p>{@html post.content.rendered}</p>
+    </article>
 
     <div>
         <img src={post.authors[0].avatar_url} alt={post.authors[0].display_name}>
@@ -35,23 +35,18 @@
 <ArtikelKlein data={data}/>
 </main>
 
-
-
 <Footer/>
 
+<style>
 
-
-
-
-
-<!-- <style>
-    :global(body) {
-        background-color: white;
-
-        background-image: url('/ellipse.svg');
-        background-repeat: no-repeat;
-        background-size: 5000px 760px;
-        background-position: -2000px -220px;
+    main {
+        max-width: var(--article-width);
+        padding: 0 1em;
     }
-</style> -->
+
+    article {
+        margin-top: 2em;
+    }
+
+</style>
 
