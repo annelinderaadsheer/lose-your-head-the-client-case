@@ -20,14 +20,28 @@
     </h2>
   
     <form class="search-form" action="/search">
-      <input class="search-input " name="q" value="" size="1" placeholder="Zoeken...">
+      <input class="search-input" name="searchterm" value={data.searchterm} size="1" placeholder="Zoeken...">
       <button type="submit" class="search-button">
-      <a href="/">
-        <img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" />
-      </a>
+        <img class="invert" src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" />
       </button>
     </form>
-  </main>
+    {#if data.posts}
+        {#each data.posts as post}
+        <!-- @html means: there is html in this string, render it -->
+            <a href="/{post.slug}">
+                <h3>{@html post.title.rendered}</h3>
+            </a>
+            <p>{@html post.excerpt.rendered}</p>
+            <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
+            <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
+            <p>{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
+            <p>{post.yoast_head_json.author}</p>
+        {/each}
+    {:else}
+        <!-- This will show if no posts are available -->
+        <p>No posts available</p>
+    {/if}
+</main>
 
 <style>
     
@@ -67,6 +81,10 @@
         font-family: var(--font-alt);
         font-size: 16px;
         font-weight: 400;
+    }
+
+    .invert {
+        filter: invert();
     }
 
     @media screen and (min-width: 300px) and (max-width:900px) {
