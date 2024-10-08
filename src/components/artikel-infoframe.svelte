@@ -56,9 +56,9 @@
     }
 
     img {
-        width: 100%;
-        object-fit: cover;
-    }
+    max-width: 100%;
+    height: auto;
+}
 
     .bold {
         font-weight: bold;
