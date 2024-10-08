@@ -2,6 +2,12 @@
     export let data;
     /** @type {import('./$types').PageData} */
     const post = data.posts[0];
+    const dateFormat = {
+        month: 'long',
+        day: 'numeric',
+        weekday: 'long',
+        year: 'numeric'
+    };
 </script>
 
 <header>
@@ -42,7 +48,7 @@
         <section class="mobile-datum">
             <div class="datum">
                 {#if post}
-                    <p>{post.date}</p>
+                    <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
                 {/if}
                 <p>PODIUM VOOR DE JOURNALISTIEK</p>
             </div>
@@ -61,7 +67,7 @@
         <section class="midden">
             <div class="datum">
                 {#if post}
-                    <p class="datum-bold">{post.date}</p>
+                    <p class="datum-bold">{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
                 {/if}
                 <p>PODIUM VOOR DE JOURNALISTIEK</p>
             </div>
@@ -157,6 +163,7 @@
     }
 
     #menu {
+        flex-direction: column;
         position: absolute;
         width: 175px;
         margin: -100px 0 0 -50px;
