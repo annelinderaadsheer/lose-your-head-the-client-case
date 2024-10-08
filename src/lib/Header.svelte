@@ -67,9 +67,9 @@
         <section class="midden">
             <div class="datum">
                 {#if post}
-                    <p class="datum-bold">{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
+                    <p class="datum-bold uppercase">{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
                 {/if}
-                <p>PODIUM VOOR DE JOURNALISTIEK</p>
+                <p class="uppercase">Podium voor de journalistiek</p>
             </div>
             <a href="/">
                 <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
@@ -210,7 +210,6 @@
         border-bottom: 1px solid rgba(154, 154, 154, 0.679);
     }
 
-    /* Font wijzigen */
     .onder ul {
         display: flex;
         align-items: center;
@@ -220,7 +219,7 @@
         list-style: none;
         border-bottom: 1px solid #ddd;
         border-top: 1px solid #ddd;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: var(--menu-item);
         font-size: 14px;
     }
 
@@ -231,7 +230,6 @@
         justify-content: space-between;
     }
 
-     /* Font wijzigen */
     .midden ul {
         display: flex; 
         list-style: none; 
@@ -240,7 +238,7 @@
         padding: 0;
         margin-left: 50px;
         gap: 20px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: var(--menu-item);
     }
 
     .datum {
@@ -249,10 +247,9 @@
         margin-right: 20px;
     }
 
-    /* Font wijzigen */
     .datum p {
         margin: 0;
-        font-family: 'Courier New', Courier, monospace;
+        font-family:var(--menu-item);
         font-size: 14px;
     }
 
@@ -298,10 +295,9 @@
         padding: 0;
     }
 
-    /* Font wijzigen */
     .boven ul li {
         padding: 15px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: var(--menu-item);
         font-size: 14px;
     }
 
