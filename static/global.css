@@ -1,6 +1,6 @@
 :root{
     /* FONTS */
-    --font-main:  Inter, 'sans-serif';
+    --font-main: Inter, 'sans-serif';
     --font-alt: Tiempos, 'Source serif 4';
     --font-style: regular;
     --font-size: 16px;
@@ -128,21 +128,18 @@ a {
     color: var(--text-color);
 }
 
-body bold{
-    font-style: var(--font-main);
-    font-style: var(--font-style-bold);
-    font-size: var(--font-size);
-    line-height: var(--line-height); 
+.bold {
+    font-weight: var(--font-style-bold);
 }
 
-body italic{
+.italic{
     font-family: var(--font-main);
     font-style: var(--font-style-italic);
     font-size: var(--font-size);
     line-height: var(--line-height);
 }
 
-body small{
+.small{
     font-family: var(--font-main);
     font-style: var(--font-style);
     font-size: var(--font-size-small);
@@ -187,67 +184,6 @@ header{
     letter-spacing: 2%;
 }
 
-.meta{
-    font-family: var(--font-main);
-    font-style: var(--font-style);
-    font-size: 11px;
-    line-height: 140%;
-    letter-spacing: 10%;
-}
-
-.boven-kop{
-    font-family: var(--font-main);
-    font-style: var(--font-style);
-    font-size: 12px;
-    line-height: 220%;
-    letter-spacing: 8%;
-}
-
-.artikel-kop{
-    font-family: var(--font-alt);
-    font-style: var(--font-style-bold);
-    font-size: 38px;
-    line-height: 120%;
-    letter-spacing: -1%;
-    margin: 0;
-}
-
-.introtekst{
-    font-family: var(--font-main);
-    font-style: var(--font-style-ligth);
-    font-size: 21px;
-    line-height: var(--line-height-small);
-    letter-spacing: -1%;
-}
-
-.tussenkop{
-    font-family: var(--font-main);
-    font-style: black;
-    font-size: 18px;
-    line-height: 150%;
-}
-
-.broodtekst{
-    font-family: var(--font-alt);
-    font-style: var(--font-style);
-    font-size: var(--font-size);
-    line-height: 170%;
-}
-
-.broodtekst-italic{
-    font-family: var(--font-alt);
-    font-style: var(--font-style-italic);
-    font-size: var(--font-size);
-    line-height: 170%;
-}
-
-.uitgelicht{
-    font-family: var(--font-alt);
-    font-style: var(--font-style-bold);
-    font-size: 38px;
-    line-height: 100%;
-}
-
 .menu-item{
     font-family: var(--font-main);
     font-style: var(--font-style);
@@ -270,4 +206,8 @@ header{
     font-size: var(--font-size);
     line-height: 100%;
     letter-spacing: -2%;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
