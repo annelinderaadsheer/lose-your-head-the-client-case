@@ -12,7 +12,7 @@
     import Header from '../../lib/Header.svelte';
 </script>
 
-<Header data={data}/>
+<Header/>
 
 <main>
     <h2 class="category-title">

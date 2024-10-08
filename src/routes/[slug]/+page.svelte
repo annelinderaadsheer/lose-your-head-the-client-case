@@ -13,7 +13,7 @@
     import Makersblok from '../components/Makersblok.svelte';
 </script>
 
-<Header data={data}/>
+<Header/>
 <ArtikelInfoframe post={post}></ArtikelInfoframe>
 
 <main>

@@ -1,13 +1,12 @@
 <script>
-    export let data;
     /** @type {import('./$types').PageData} */
-    const post = data.posts[0];
     const dateFormat = {
         month: 'long',
         day: 'numeric',
         weekday: 'long',
         year: 'numeric'
     };
+    import { categoriesData } from "/src/lib/index.js";
 </script>
 
 <header>
@@ -15,19 +14,19 @@
         <section class="mobile-header">
             <nav>
                 <div id="menuToggle">
-                    <input type="checkbox" />
+                    <input type="checkbox"/>
                     <span></span>
                     <span></span>
                     <span></span>
                     <ul id="menu">
-                        <li>Binnenland</li>
-                        <li>Buitenland</li>
-                        <li>Colums</li>
-                        <li>Economie</li>
-                        <li>Kunst en Media</li>
-                        <li>Podcast</li>
-                        <li>Politiek</li>
-                        <li>Wetenschap</li>
+                        <li>
+                            <a href="/">Voorpagina</a>
+                        </li>
+                        {#each categoriesData as category}
+                            <li>
+                                <a href="/categorie/{category.slug}">{category.name}</a>
+                            </li>
+                        {/each}
                         <div class="boven-mobile">
                             <li>Colofon</li>
                             <li>Over</li>
@@ -46,11 +45,9 @@
         </section>
 
         <section class="mobile-datum">
-            <div class="datum">
-                {#if post}
-                    <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
-                {/if}
-                <p>PODIUM VOOR DE JOURNALISTIEK</p>
+            <div class="datum uppercase">
+                <p>{(new Date()).toLocaleDateString("nl-NL", dateFormat)}</p>
+                <p class="uppercase">podium voor de journalistiek</p>
             </div>
         </section>
     </div>
@@ -66,9 +63,7 @@
         </section>
         <section class="midden">
             <div class="datum">
-                {#if post}
-                    <p class="datum-bold uppercase">{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
-                {/if}
+                <p class="datum-bold uppercase">{(new Date()).toLocaleDateString("nl-NL", dateFormat)}</p>
                 <p class="uppercase">Podium voor de journalistiek</p>
             </div>
             <a href="/">
@@ -86,15 +81,10 @@
         </section>
         <section class="onder">
             <ul>
-                <li>Voorpagina</li>
-                <li>Binnenland</li>
-                <li>Buitenland</li>
-                <li>Colums</li>
-                <li>Economie</li>
-                <li>Kunst en Media</li>
-                <li>Podcast</li>
-                <li>Politiek</li>
-                <li>Wetenschap</li>
+                <li><a href="/">Voorpagina</a></li>
+                {#each categoriesData as category}
+                    <li><a href="/categorie/{category.slug}">{category.name}</a></li>
+                {/each}
             </ul>
         </section>
     </div>
