@@ -23,11 +23,11 @@
                         <li>Politiek</li>
                         <li>Wetenschap</li>
                         <div class="boven-mobile">
-                        <li>Colofon</li>
-                <li>Over</li>
-                <li>Meedoen</li>
-                <li>Contact</li>
-            </div>
+                            <li>Colofon</li>
+                            <li>Over</li>
+                            <li>Meedoen</li>
+                            <li>Contact</li>
+                        </div>
                     </ul>
                 </div>
             </nav>
@@ -59,14 +59,14 @@
         <section class="midden">
             <div class="datum">
                 {#if post}
-                    <p>{post.date}</p>
+                    <p class="datum-bold">{post.date}</p>
                 {/if}
                 <p>PODIUM VOOR DE JOURNALISTIEK</p>
             </div>
-            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="250" height="60" />
+            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
             <ul>
                 <li>Nieuwsbrief</li>
-                <li><button>DONEREN</button></li>
+                <li><button>Doneren</button></li>
                 <li><img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" /></li>
             </ul>
         </section>
@@ -85,6 +85,7 @@
         </section>
     </div>
 </header>
+
 
 <style>
     #menuToggle {
@@ -157,7 +158,7 @@
         padding-top: 125px;
         background: #F7F7F5;
         list-style-type: none;
-        -webkit-font-smoothing: antialiased; /* to stop flickering of text in Safari */
+        -webkit-font-smoothing: antialiased; 
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
@@ -168,10 +169,11 @@
     }
 
    .boven-mobile {
-    border-top: 1px solid rgba(154, 154, 154, 0.679);
-    font-size: smaller;
-    font-weight: bold;
+        border-top: 1px solid rgba(154, 154, 154, 0.679);
+        font-size: smaller;
+        font-weight: bold;
    }
+
     #menuToggle input:checked ~ ul {
         transform: none;
     }
@@ -193,6 +195,7 @@
         border-bottom: 1px solid rgba(154, 154, 154, 0.679);
     }
 
+    /* Font wijzigen */
     .onder ul {
         display: flex;
         align-items: center;
@@ -200,8 +203,10 @@
         justify-content: center;
         gap: 20px;
         list-style: none;
-        border-bottom: 1px solid rgb(60, 60, 60);
-        border-top: 1px solid rgb(60, 60, 60);
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
     }
 
     .midden {
@@ -211,26 +216,56 @@
         justify-content: space-between;
     }
 
+     /* Font wijzigen */
     .midden ul {
-        display: flex; /* Flexbox toepassen op de ul om items naast elkaar te plaatsen */
-        list-style: none; /* Verwijdert de standaard bullet points */
+        display: flex; 
+        list-style: none; 
         margin: 0;
         cursor: pointer;
         padding: 0;
         margin-left: 50px;
         gap: 20px;
+        font-family: 'Courier New', Courier, monospace;
     }
 
+    .datum {
+        display: flex;
+        flex-direction: column; 
+        margin-right: 20px;
+    }
+
+    /* Font wijzigen */
     .datum p {
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+    }
+
+    .datum-bold {
+    font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 15px; 
+        padding: 0;
         margin: 0;
     }
 
+    ul li {
+        display: flex;
+        align-items: center;
+    }
+
     button {
-        background-color: red;
+        background-color: #E85340;
         color: white;
         border: none;
         cursor: pointer;
         border-radius: 2px;
+        width: 110px;
+        height: 30px;
     }
 
     .boven {
@@ -248,13 +283,20 @@
         padding: 0;
     }
 
+    /* Font wijzigen */
     .boven ul li {
         padding: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
     }
 
     @media (max-width: 786px) {
         .groot-scherm {
             display: none;
+        }
+
+        .boven ul {
+            display: none; 
         }
     }
 
@@ -263,4 +305,5 @@
             display: none;
         }
     }
+
 </style>
