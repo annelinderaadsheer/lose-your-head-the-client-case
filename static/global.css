@@ -28,20 +28,17 @@
     /* WIDTH/HEIGHT */
     --main-width: 1240px;
     --article-width: 600px;
+    --margin-center: 0 auto;
     --thumbnail-width: 100%;
     --thumbnail-height: 200px;
     --thumbnail-heightsm: 150px;
   
+    /* BORDERS */
     --border: solid var(--text-color) 1px;
     --border-light: solid var(--light-border-color) 1px;
     
-    --margin-center: 0 auto;
-  
     --line-length: 75ch;
     --line-heigth: 30px;
-  
-    --font-main: Tiempos, 'Source serif 4';
-    --font-alt: Inter, 'sans-serif';
 }
 
 /* #region Fonts */

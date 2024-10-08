@@ -7,12 +7,10 @@
         month: 'short',
         day: 'numeric',
     };
+    
     import Footer from '$lib/Footer.svelte';
-import Header from '../lib/Header.svelte';
+    import Header from '../lib/Header.svelte';
 </script>
-
-
-
 
 <Header data={data}/>
 

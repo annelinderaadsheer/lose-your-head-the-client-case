@@ -31,10 +31,12 @@
                     </ul>
                 </div>
             </nav>
-            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="150" height="35" />
-            <div class="mobile-search-icon">
+            <a href="/">
+                <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="150" height="35" />
+            </a>
+            <a href="/search" class="mobile-search-icon">
                 <img src="/free-search-icon-2903-thumb.png" alt="Search" width="25" height="25" />
-            </div>
+            </a>
         </section>
 
         <section class="mobile-datum">
@@ -63,11 +65,17 @@
                 {/if}
                 <p>PODIUM VOOR DE JOURNALISTIEK</p>
             </div>
-            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
+            <a href="/">
+                <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
+            </a>
             <ul>
                 <li>Nieuwsbrief</li>
                 <li><button>Doneren</button></li>
-                <li><img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" /></li>
+                <li>
+                    <a href="/search">
+                        <img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" />
+                    </a>
+                </li>
             </ul>
         </section>
         <section class="onder">
