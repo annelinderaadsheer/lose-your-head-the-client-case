@@ -43,6 +43,8 @@
     {/if}
 </main>
 
+<Footer/>
+
 <style>
     
     main .search-form {
