@@ -10,6 +10,7 @@
     // Check if the data has been received and is an array
     console.log("Received data in +page.svelte:", data);
     const post = data.posts[0];
+    import Makersblok from '../components/Makersblok.svelte';
 </script>
 
 <Header data={data}/>
@@ -18,16 +19,12 @@
 <main>
     {#if post}
     <!-- @html means: there is html in this string, render it -->
+
     <article>
         <p>{@html post.content.rendered}</p>
+        <Makersblok author={post.authors[0]}></Makersblok>
     </article>
-
-    <div>
-        <img src={post.authors[0].avatar_url} alt={post.authors[0].display_name}>
-        <p>{post.authors[0].display_name}</p>
-        <p>{post.authors[0].job_title}</p>
-        <p>{post.authors[0].description}</p>
-    </div>
+  
 {:else}
     <p>No post available</p>
 {/if}
