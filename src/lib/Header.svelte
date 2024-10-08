@@ -31,10 +31,12 @@
                     </ul>
                 </div>
             </nav>
-            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="150" height="35" />
-            <div class="mobile-search-icon">
+            <a href="/">
+                <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="150" height="35" />
+            </a>
+            <a href="/search" class="mobile-search-icon">
                 <img src="/free-search-icon-2903-thumb.png" alt="Search" width="25" height="25" />
-            </div>
+            </a>
         </section>
 
         <section class="mobile-datum">
@@ -59,15 +61,21 @@
         <section class="midden">
             <div class="datum">
                 {#if post}
-                    <p>{post.date}</p>
+                    <p class="datum-bold">{post.date}</p>
                 {/if}
                 <p>PODIUM VOOR DE JOURNALISTIEK</p>
             </div>
-            <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="230" height="60" />
+            <a href="/">
+                <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
+            </a>
             <ul>
                 <li>Nieuwsbrief</li>
-                <li><button>DONEREN</button></li>
-                <li><img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" /></li>
+                <li><button>Doneren</button></li>
+                <li>
+                    <a href="/search">
+                        <img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" />
+                    </a>
+                </li>
             </ul>
         </section>
         <section class="onder">
@@ -169,10 +177,11 @@
     }
 
    .boven-mobile {
-    border-top: 1px solid rgba(154, 154, 154, 0.679);
-    font-size: smaller;
-    font-weight: bold;
+        border-top: 1px solid rgba(154, 154, 154, 0.679);
+        font-size: smaller;
+        font-weight: bold;
    }
+
     #menuToggle input:checked ~ ul {
         transform: none;
     }
@@ -194,6 +203,7 @@
         border-bottom: 1px solid rgba(154, 154, 154, 0.679);
     }
 
+    /* Font wijzigen */
     .onder ul {
         display: flex;
         align-items: center;
@@ -201,8 +211,10 @@
         justify-content: center;
         gap: 20px;
         list-style: none;
-        border-bottom: 1px solid rgb(60, 60, 60);
-        border-top: 1px solid rgb(60, 60, 60);
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
     }
 
     .midden {
@@ -212,26 +224,56 @@
         justify-content: space-between;
     }
 
+     /* Font wijzigen */
     .midden ul {
-        display: flex; /* Flexbox toepassen op de ul om items naast elkaar te plaatsen */
-        list-style: none; /* Verwijdert de standaard bullet points */
+        display: flex; 
+        list-style: none; 
         margin: 0;
         cursor: pointer;
         padding: 0;
         margin-left: 50px;
         gap: 20px;
+        font-family: 'Courier New', Courier, monospace;
     }
 
+    .datum {
+        display: flex;
+        flex-direction: column; 
+        margin-right: 20px;
+    }
+
+    /* Font wijzigen */
     .datum p {
+        margin: 0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+    }
+
+    .datum-bold {
+    font-weight: bold;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        gap: 15px; 
+        padding: 0;
         margin: 0;
     }
 
+    ul li {
+        display: flex;
+        align-items: center;
+    }
+
     button {
-        background-color: red;
+        background-color: #E85340;
         color: white;
         border: none;
         cursor: pointer;
         border-radius: 2px;
+        width: 110px;
+        height: 30px;
     }
 
     .boven {
@@ -249,8 +291,11 @@
         padding: 0;
     }
 
+    /* Font wijzigen */
     .boven ul li {
         padding: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
     }
 
     @media (max-width: 786px) {
@@ -258,6 +303,9 @@
             display: none;
         }
 
+        .boven ul {
+            display: none; 
+        }
     }
 
     @media (min-width: 786px) {
@@ -265,7 +313,5 @@
             display: none;
         }
     }
-
-    
 
 </style>

@@ -22,7 +22,7 @@
             <h3>{@html post.title.rendered}</h3>
         </a>
         <p>{@html post.excerpt.rendered}</p>
-        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding" width="300" height="300">
+        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding" width="350" height="350">
         <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
         <p>{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
         <p>{post.yoast_head_json.author}</p>
@@ -37,9 +37,6 @@
 <Footer />
 
 <style>
-
-  main{
-    padding: 10px;
-  }
+  
 </style>
 
