@@ -19,9 +19,8 @@
 <main>
     {#if post}
     <!-- @html means: there is html in this string, render it -->
-
     <article>
-        <p>{@html post.content.rendered}</p>
+        <p>{@html post.content.rendered} </p>
         <Makersblok author={post.authors[0]}></Makersblok>
     </article>
   
