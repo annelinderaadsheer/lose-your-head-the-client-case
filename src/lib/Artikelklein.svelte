@@ -1,29 +1,25 @@
 <script>
     export let data;
-    export let numberOfPosts = 5;
 </script>
 
 <div class="artikelen">
-{#if data.posts}
-    {#each data.posts.slice(0, numberOfPosts) as post}
-    <a href="/" class="article-link" aria-label="">
-        <article>
-            <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
-            <h3>{@html post.title.rendered}</h3>
-            <p>door <strong>{@html post.yoast_head_json.author}</strong></p>
-        </article>
-    </a>
-
-    {/each}
-    
-{:else}
-    <p>No posts available</p>
-{/if}
+    {#if data.posts && data.posts.length > 0} <!-- Controleer of er posts zijn -->
+        {#each data.posts as post} <!-- Geen slice, dus we tonen alle posts -->
+            <a href="/" class="article-link" aria-label="">
+                <article>
+                    <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
+                    <h3>{@html post.title.rendered}</h3>
+                    <p>door <strong>{@html post.yoast_head_json.author}</strong></p>
+                </article>
+            </a>
+        {/each}
+    {:else}
+        <p>No posts available</p>
+    {/if}
 </div>
 
 <style>
-
-    .artikelen{
+    .artikelen {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
