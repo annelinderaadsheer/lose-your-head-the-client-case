@@ -16,10 +16,10 @@ const toggleMenu = () => {
 <header>
     <div class="top-bar">
       <nav class="top-nav">
-        <a href="#">Colofon</a>
-        <a href="#">Over</a>
-        <a href="#">Meedoen</a>
-        <a href="#">Contact</a>
+        <a href="/">Colofon</a>
+        <a href="/">Over</a>
+        <a href="/">Meedoen</a>
+        <a href="/">Contact</a>
       </nav>
     </div>
   

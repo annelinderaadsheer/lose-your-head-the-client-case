@@ -176,7 +176,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
     footer {
         padding: 10px; 
     }
