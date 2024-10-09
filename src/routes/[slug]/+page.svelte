@@ -8,7 +8,6 @@
     export let data;
     
     // Check if the data has been received and is an array
-    console.log("Received data in +page.svelte:", data);
     const post = data.posts[0];
     import Makersblok from '../components/Makersblok.svelte';
 </script>
