@@ -13,8 +13,7 @@
     --font-style-extra-bold: extra-bold;
 
     /* COLORS */
-    --background-color: #f7f7f5;
-    --article-background-color: #ffffff;
+    --background-color: #ffffff;
     --img-text-background-color: #00000080;
     --text-color: #000000;
     --alt-text-color: #757575;
@@ -176,7 +175,7 @@ header{
     letter-spacing: -1%;
 }
 
-.kop-4{
+h4 {
     font-family: var(--font-main);
     font-style: var(--font-style-bold);
     font-size: var(--font-size-small);
@@ -210,4 +209,20 @@ header{
 
 .uppercase {
     text-transform: uppercase;
+}
+
+blockquote {
+    font-family: var(--font-alt);
+    font-style: bold;
+    font-size: 38px;
+    line-height: 100%;
+    padding-top: 1em;
+}
+
+blockquote::before {
+    content: '‘’';
+    color: var(--accent-color1);
+    font-size: 100px;
+    margin-bottom: -60px;
+    display: block;
 }

@@ -6,7 +6,7 @@
         weekday: 'long',
         year: 'numeric'
     };
-    import { categoriesData } from "/src/lib/index.js";
+    import { categoriesData } from "$lib/index.js";
 </script>
 
 <header>

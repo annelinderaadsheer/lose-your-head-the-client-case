@@ -1,6 +1,6 @@
 <script>
     import ArtikelInfoframe from '../../components/artikel-infoframe.svelte';
-    import Header from '../../lib/Header.svelte';
+    import Header from '$lib/Header.svelte';
     import ArtikelKlein from '$lib/Artikelklein.svelte';
     import Footer from '$lib/Footer.svelte';
 
