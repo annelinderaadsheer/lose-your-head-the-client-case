@@ -50,6 +50,24 @@ h1 {
 .btn:hover {
     background-color: #ff4500; /* Oranje-rot bij hover */
 }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 23px;
+    }
+}
 </style>
 
 <Footer />
