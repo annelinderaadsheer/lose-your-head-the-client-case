@@ -255,6 +255,16 @@
         margin: 0;
     }
 
+ul li:hover {
+    color: #000000;
+    background-color: #f0f0f0;
+}
+
+ul a:hover {
+    color: #ff0000;
+    background-color: #f0f0f0;
+}
+
     ul li {
         display: flex;
         align-items: center;
@@ -276,6 +286,7 @@
         color: white;
         justify-content: end;
     }
+    
 
     .boven ul {
         display: flex;
