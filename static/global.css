@@ -19,7 +19,7 @@
     --alt-text-color: #757575;
     --light-border-color: #9b9b9b94;
     --accent-color1: #D5302D;
-    --accent-color2: #f4a8a1;
+    --accent-color2: #F4FBE9;
     --accent-color3: #f2d930;
     --accent-color4: #5340e8;
     --border-fieldset-focus: #005FCC;
@@ -100,7 +100,6 @@ body {
 main {
     max-width: 1240px;
     margin: var(--margin-center);
-    margin-top: 6rem;
 }
   
 a {
@@ -115,16 +114,6 @@ button, a.button {
     text-align: center;
     cursor: pointer;
     border: none;
-}
-
-main {
-    max-width: var(--main-width);
-    margin: var(--margin-center);
-}
-  
-a {
-    text-decoration: none;
-    color: var(--text-color);
 }
 
 .bold {
@@ -209,6 +198,42 @@ h4 {
 
 .uppercase {
     text-transform: uppercase;
+}
+
+.meta {
+    font-family: var(--font-main);
+    font-style: var(--font-style);
+    font-size: 11px;
+    line-height: 140%;
+    letter-spacing: 10%;
+}
+
+.tussenkop{
+    font-family: var(--font-main);
+    font-style: black;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.broodtekst{
+    font-family: var(--font-alt);
+    font-style: var(--font-style);
+    font-size: var(--font-size);
+    line-height: 170%;
+}
+
+.broodtekst-italic {
+    font-family: var(--font-alt);
+    font-style: var(--font-style-italic);
+    font-size: var(--font-size);
+    line-height: 170%;
+}
+
+.uitgelicht{
+    font-family: var(--font-alt);
+    font-style: var(--font-style-bold);
+    font-size: 38px;
+    line-height: 100%;
 }
 
 blockquote {

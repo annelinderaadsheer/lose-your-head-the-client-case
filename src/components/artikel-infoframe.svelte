@@ -32,12 +32,9 @@
     }
 
     header {
-        width: 100vw;
-        
-        background-image: url('/ellipse.svg');
-        background-repeat: no-repeat;
-        background-size: 5000px 760px;
-        background-position: -2000px -220px;
+        width: calc(100vw - 2em);
+        background-color: var(--accent-color2);
+        padding: 0 1em;
     }
 
     .container {
@@ -52,7 +49,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 2em 0;
+        width: 100%;
+        overflow-wrap: break-word;
     }
 
     .artikel-kop{

@@ -1,6 +1,6 @@
 <script>
     import ArtikelInfoframe from '../../components/artikel-infoframe.svelte';
-    import Header from '$lib/Header.svelte';
+    import Header from '../../lib/Header.svelte';
     import ArtikelKlein from '$lib/Artikelklein.svelte';
     import Footer from '$lib/Footer.svelte';
 
@@ -41,42 +41,6 @@
 
     article {
         margin-top: 2em;
-    }
-
-    .meta {
-        font-family: var(--font-main);
-        font-style: var(--font-style);
-        font-size: 11px;
-        line-height: 140%;
-        letter-spacing: 10%;
-    }
-
-    .tussenkop{
-        font-family: var(--font-main);
-        font-style: black;
-        font-size: 18px;
-        line-height: 150%;
-    }
-
-    .broodtekst{
-        font-family: var(--font-alt);
-        font-style: var(--font-style);
-        font-size: var(--font-size);
-        line-height: 170%;
-    }
-
-    .broodtekst-italic {
-        font-family: var(--font-alt);
-        font-style: var(--font-style-italic);
-        font-size: var(--font-size);
-        line-height: 170%;
-    }
-
-    .uitgelicht{
-        font-family: var(--font-alt);
-        font-style: var(--font-style-bold);
-        font-size: 38px;
-        line-height: 100%;
     }
 
 </style>
