@@ -255,7 +255,7 @@
         margin: 0;
     }
 
-ul li:hover {
+.boven li:hover {
     color: #000000;
     background-color: #f0f0f0;
 }
