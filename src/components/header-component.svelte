@@ -1,18 +1,12 @@
-<!-- <script>
-export let Header
-</script> -->
-
 <script>
 let isMenuOpen = false;
 
-// Functie om menu te openen/sluiten
 const toggleMenu = () => {
   isMenuOpen = !isMenuOpen;
 };
 </script>
 
 <!-- Header desktop -->
-
 <header>
     <div class="top-bar">
       <nav class="top-nav">
@@ -143,11 +137,6 @@ width: 100%;
   font-size: 0.6rem; 
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-    }
-
-
- .newsletter-button:hover, .donate-button:hover {
-  
 }
 
 .search-icon {

@@ -3,7 +3,7 @@
     import Footer from '$lib/Footer.svelte';
 </script>
 
-<Header />
+<Header/>
 
 <div class="container">
     <h1>Oeps! Iets is misgegaan! 🚫</h1>
@@ -14,60 +14,60 @@
 </div>
 
 <style>
-.container {
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.error-gif {
-    width: 300px;
-    height: auto;
-}
-
-.error-message {
-    font-size: 1.5em;
-    color: #ff6347; /* Tomato color */
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6347; /* Tomaatkleur */
-    color: white;
-    text-decoration: none; /* Geen onderstreping */
-    border-radius: 5px; /* Ronde hoeken */
-    transition: background-color 0.3s; /* Smooth hover effect */
-}
-
-.btn:hover {
-    background-color: #ff4500; /* Oranje-rot bij hover */
-}
-
-@media (max-width: 600px) {
-    h1 {
-        font-size: 30px;
+    .container {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-}
 
-@media (max-width: 450px) {
     h1 {
-        font-size: 25px;
+        font-size: 2.5em;
+        margin-bottom: 20px;
     }
-}
 
-@media (max-width: 450px) {
-    h1 {
-        font-size: 23px;
+    .error-gif {
+        width: 300px;
+        height: auto;
     }
-}
+
+    .error-message {
+        font-size: 1.5em;
+        color: #ff6347; /* Tomato color */
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff6347; /* Tomaatkleur */
+        color: white;
+        text-decoration: none; /* Geen onderstreping */
+        border-radius: 5px; /* Ronde hoeken */
+        transition: background-color 0.3s; /* Smooth hover effect */
+    }
+
+    .btn:hover {
+        background-color: #ff4500; /* Oranje-rood bij hover */
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    @media (max-width: 450px) {
+        h1 {
+            font-size: 23px;
+        }
+    }
 </style>
 
-<Footer />
+<Footer/>

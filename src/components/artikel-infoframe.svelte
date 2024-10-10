@@ -1,6 +1,5 @@
 <script>
     export let post
-
     const dateFormat = {
         day: 'numeric',
         month: 'long',
@@ -11,20 +10,27 @@
 <header>
     <div class="container">
         <article class="summary">
-            <p class="boven-kop uppercase bold">{@html post.yoast_head_json.schema["@graph"][0].articleSection[0]}</p>
+            <p class="boven-kop uppercase bold">
+                {@html post.yoast_head_json.schema["@graph"][0].articleSection[0]}
+            </p>
             <h1 class="artikel-kop">{@html post.title.rendered}</h1>
-            <div class="introtekst">{@html post.excerpt.rendered}</div>
+            <div class="introtekst">
+                {@html post.excerpt.rendered}
+            </div>
             <div class="author-and-read-time">
                 <p>Door <span class="bold">{post.authors[0].display_name}</span></p>
-                <p >{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
+                <p>{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
             </div>
         </article>
         <article class="img-container">
             <img width="850" height="400" src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
-            <p class="small">{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
+            <p class="small">
+                {(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}
+            </p>
         </article>
     </div>
 </header>
+
 
 <style>
     * {
@@ -80,9 +86,9 @@
     }
 
     img {
-    max-width: 100%;
-    height: auto;
-}
+        max-width: 100%;
+        height: auto;
+    }
 
     @media only screen and (min-width: 960px) {
         .container {

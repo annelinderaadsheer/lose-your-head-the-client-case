@@ -1,5 +1,4 @@
 <script>
-
     /** @type {import('./$types').PageData} */
     export let data;
 
@@ -17,7 +16,7 @@
 <main>
     {#if data.posts}
         {#each data.posts as post}
-        <!-- @html means: there is html in this string, render it -->
+            <!-- @html means: there is html in this string, render it -->
             <a href="/{post.slug}">
                 <h3>{@html post.title.rendered}</h3>
             </a>
@@ -33,15 +32,11 @@
     {/if}
 </main>
 
-
 <Footer />
 
 <style>
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-  
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 </style>
-

@@ -90,7 +90,6 @@
     </div>
 </header>
 
-
 <style>
     #menuToggle {
         display: block;
@@ -244,7 +243,7 @@
     }
 
     .datum-bold {
-    font-weight: bold;
+        font-weight: bold;
     }
 
     ul {
@@ -255,15 +254,15 @@
         margin: 0;
     }
 
-.boven li:hover {
+    .boven li:hover {
     color: #000000;
     background-color: #f0f0f0;
-}
+    }
 
-ul a:hover {
+    ul a:hover {
     color: #ff0000;
     background-color: #f0f0f0;
-}
+    }
 
     ul li {
         display: flex;
@@ -287,7 +286,6 @@ ul a:hover {
         justify-content: end;
     }
     
-
     .boven ul {
         display: flex;
         list-style: none;
@@ -317,5 +315,4 @@ ul a:hover {
             display: none;
         }
     }
-
 </style>

@@ -42,6 +42,4 @@
     article {
         margin-top: 2em;
     }
-
 </style>
-

@@ -68,7 +68,7 @@
             </ul>
         </li>
     </ul>
-    
+
     <section class="end-footer">
         <p>© {year} Stichting Red Pers - Alle rechten voorbehouden</p>
         <ul class="end-footer-credits">
@@ -78,140 +78,138 @@
         </ul>
     </section>
 
-    <style>
-        footer {
-            background-color: #f5f5f5;
-            padding: 100px;
-        }
-
-        footer img{
-            max-width: 200px;
-            max-height: 200px;
-            margin-bottom: 50px;
-        }
-
-        .footer-layout {
-            list-style-type: none;
-            padding: 0;
-            margin: 0 0 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .footer-layout h3 {
-            padding: 0;
-            margin: 0;
-            margin-bottom: 10px;
-        }
-
-        .sub-list {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        .sub-list a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .sub-list li{
-            margin-left: -20px;
-        }
-
-        .kopjes {
-            margin-bottom: 20px;
-        }
-
-        .end-footer {
-            border-top: 1px solid #ccc;
-            display: flex;
-            margin-top: 75px;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .end-footer-credits {
-            display: flex;
-            gap: 10px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .end-footer-credits li {
-            margin: 0;
-        }
-
-        .end-footer-credits a {
-            text-decoration: none;
-            color: #333;
-        }
-
-
-        @media (min-width: 768px) and (max-width: 1024px) {
-            .footer-layout {
-                padding: 40px;
-            }
-
-            .end-footer-credits {
-                gap: 20px;
-            }
-        }
-
-        footer {
-    background-color: #f5f5f5;
-    padding: 50px 20px;
-}
-
-@media (min-width: 768px) {
+<style>
     footer {
-        padding: 70px 40px;
-    }
-}
-
-@media (min-width: 1025px) {
-    footer {
+        background-color: #f5f5f5;
         padding: 100px;
-    }
-}
-
-@media (max-width: 460px) {
-    footer {
-        padding: 10px; 
-    }
-
-    .footer-layout {
-        flex-direction: column; 
-        align-items: center;
-        gap: 15px;
-    }
-
-    .footer-layout h3 {
-        font-size: 16px; 
-        margin-bottom: 5px;
     }
 
     footer img {
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 200px;
+        max-height: 200px;
+        margin-bottom: 50px;
+    }
+
+    .footer-layout {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 0 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footer-layout h3 {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .sub-list {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .sub-list a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .sub-list li {
+        margin-left: -20px;
+    }
+
+    .kopjes {
         margin-bottom: 20px;
     }
 
     .end-footer {
-        flex-direction: column; 
+        border-top: 1px solid #ccc;
+        display: flex;
+        margin-top: 75px;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
-        margin-top: 20px; 
-        padding-top: 10px;
     }
 
     .end-footer-credits {
-        flex-direction: column; 
-        align-items: center;
-        gap: 5px;
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
-}
-        
-    </style>
+
+    .end-footer-credits li {
+        margin: 0;
+    }
+
+    .end-footer-credits a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .footer-layout {
+            padding: 40px;
+        }
+
+        .end-footer-credits {
+            gap: 20px;
+        }
+    }
+
+    footer {
+        background-color: #f5f5f5;
+        padding: 50px 20px;
+    }
+
+    @media (min-width: 768px) {
+        footer {
+            padding: 70px 40px;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        footer {
+            padding: 100px;
+        }
+    }
+
+    @media (max-width: 460px) {
+        footer {
+            padding: 10px;
+        }
+
+        .footer-layout {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-layout h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        footer img {
+            max-width: 100px;
+            max-height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .end-footer {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+
+        .end-footer-credits {
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+</style>
 </footer>
