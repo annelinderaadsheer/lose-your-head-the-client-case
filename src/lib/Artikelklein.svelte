@@ -3,8 +3,8 @@
 </script>
 
 <div class="artikelen">
-    {#if data.posts && data.posts.length > 0} <!-- Controleer of er posts zijn -->
-        {#each data.posts as post} <!-- Geen slice, dus we tonen alle posts -->
+    {#if data.posts && data.posts.length > 0} 
+        {#each data.posts as post} 
             <a href="/" class="article-link" aria-label="">
                 <article>
                     <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
