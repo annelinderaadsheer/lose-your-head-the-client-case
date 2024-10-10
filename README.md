@@ -24,6 +24,8 @@ Ons doel was om deze verbeteringen te realiseren voor een betere gebruikerservar
 
 ## Live Link Website 🔗
 
+https://lose-your-head-the-client-case-iu4t.vercel.app
+
 ## How to use the page ⌨️ 🖱️
 De website is ontworpen met een gebruiksvriendelijke interface. Bezoekers kunnen eenvoudig door de pagina's navigeren dankzij de intuïtieve structuur. Interactie met de website gebeurt via knoppen, formulieren en andere interactieve elementen die consistent werken op verschillende apparaten.
 
