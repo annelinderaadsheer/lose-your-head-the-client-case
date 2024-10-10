@@ -33,7 +33,7 @@
                 <li><a href="/">Economie</a></li>
                 <li><a href="/">Kunst & Media</a></li>
                 <li><a href="/">Podcast</a></li>
-                <li><a href="/">Politiek</a></li>
+                <li><a href="/">Politiek.</a></li>
                 <li><a href="/">Wetenschap</a></li>
             </ul>
         </li>
