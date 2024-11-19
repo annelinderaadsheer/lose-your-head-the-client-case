@@ -1,6 +1,6 @@
 <script>
-    import ArtikelInfoframe from '../../components/artikel-infoframe.svelte';
-    import Header from '../../lib/Header.svelte';
+    import ArtikelInfoframe from '$lib/ArtikelInfoframe.svelte';
+    import Header from '$lib/Header.svelte';
     import ArtikelKlein from '$lib/Artikelklein.svelte';
     import Footer from '$lib/Footer.svelte';
 
@@ -9,7 +9,7 @@
     
     // Check if the data has been received and is an array
     const post = data.posts[0];
-    import Makersblok from '../components/Makersblok.svelte';
+    import Makersblok from '$lib/Makersblok.svelte';
 </script>
 
 <Header/>

@@ -77,6 +77,7 @@
             <li><a href="/">Copyright</a></li>
         </ul>
     </section>
+</footer>
 
 <style>
     
@@ -213,4 +214,3 @@
         }
     }
 </style>
-</footer>
