@@ -15,7 +15,7 @@
         <section class="mobile-header">
             <nav>
                 <div id="menuToggle">
-                    <input type="checkbox"/>
+                    <input type="checkbox" aria-label="Menu"/>
                     <span></span>
                     <span></span>
                     <span></span>

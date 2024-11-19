@@ -27,14 +27,14 @@
 
 <form action={resultsPage}>
     {#if alwaysOpen}
-        <input class="search-bar" placeholder={placeholder} name={name} value={value}>
-        <button type="submit" class="search-button">
-            <img src="/search-svgrepo-com.svg" alt="search icon">
+        <input class="search-bar" placeholder={placeholder} name={name} value={value} aria-label="Search bar">
+        <button type="submit" class="search-button" width="50px" height="50px">
+            <img src="/search-svgrepo-com.svg" alt="search icon" width="50px" height="50px">
         </button>
     {:else}
-        <input on:blur={handleBlur} on:focus={handleClick} bind:this={searchBar} class="search-bar closed" placeholder={placeholder} name={name} value={value}>
-        <button on:click={handleClick} bind:this={searchButton} type="submit" class="search-button">
-            <img src="/search-svgrepo-com.svg" alt="search icon">
+        <input on:blur={handleBlur} on:focus={handleClick} bind:this={searchBar} class="search-bar closed" placeholder={placeholder} name={name} value={value} aria-label="Search bar">
+        <button on:click={handleClick} bind:this={searchButton} type="submit" class="search-button" width="50px" height="50px">
+            <img src="/search-svgrepo-com.svg" alt="search icon" width="50px" height="50px">
         </button>
     {/if}
 </form>
@@ -49,7 +49,7 @@
 
     .search-bar {
         width: 100%;
-        height: 2em;
+        height: 2.5em;
         transition: width 500ms;
     }
 
@@ -60,6 +60,9 @@
 
     button {
         filter: invert(1);
+        background-color: white;
+        height: 3em;
+        width: 3em;
     }
 
     .closed + button {
