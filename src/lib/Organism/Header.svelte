@@ -7,7 +7,7 @@
         year: 'numeric'
     };
     import { categoriesData } from "$lib/index.js";
-    import SearchBar from "$lib/SearchBar.svelte";
+    import SearchBar from "$lib/Molecules/SearchBar.svelte";
 </script>
 
 <header>

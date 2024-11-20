@@ -1,15 +1,15 @@
 <script>
-    import ArtikelInfoframe from '$lib/ArtikelInfoframe.svelte';
-    import Header from '$lib/Header.svelte';
-    import ArtikelKlein from '$lib/Artikelklein.svelte';
-    import Footer from '$lib/Footer.svelte';
+    import ArtikelInfoframe from '$lib/Organism/ArtikelInfoframe.svelte';
+    import Header from '$lib/Organism/Header.svelte';
+    import ArtikelKlein from '$lib/Molecules/Artikelklein.svelte';
+    import Footer from '$lib/Organism/Footer.svelte';
 
     /** @type {import('./$types').PageData} */
     export let data;
     
     // Check if the data has been received and is an array
     const post = data.posts[0];
-    import Makersblok from '$lib/Makersblok.svelte';
+    import Makersblok from '$lib/Molecules/Makersblok.svelte';
 </script>
 
 <Header/>

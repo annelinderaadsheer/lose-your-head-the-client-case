@@ -1,10 +1,10 @@
 // place files you want to import through the `$lib` alias in this folder.
 
-export { default as Artikelklein } from'./Artikelklein.svelte';
+export { default as Artikelklein } from'$lib/Molecules/Artikelklein.svelte';
 
-export { default as Footer } from './Footer.svelte'
+export { default as Footer } from '$lib/Organism/Footer.svelte'
 
-export { default as Header } from './Header.svelte';
+export { default as Header } from '$lib/Organism/Header.svelte';
 
 // This is an array with the data for categories with all the correct id's and slugs
 export const categoriesData = [

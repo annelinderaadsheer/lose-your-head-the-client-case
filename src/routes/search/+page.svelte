@@ -8,9 +8,9 @@
         day: 'numeric',
     };
 
-    import Footer from '$lib/Footer.svelte';
-    import Header from '$lib/Header.svelte';
-    import SearchBar from '$lib/SearchBar.svelte';
+    import Footer from '$lib/Organism/Footer.svelte';
+    import Header from '$lib/Organism/Header.svelte';
+    import SearchBar from '$lib/Molecules/SearchBar.svelte';
 </script>
 
 <Header/>
