@@ -6,6 +6,8 @@ export { default as Footer } from './Footer.svelte'
 
 export { default as Header } from './Header.svelte';
 
+export { default as Donationbtn } from './Donationbtn.svelte';
+
 // This is an array with the data for categories with all the correct id's and slugs
 export const categoriesData = [
     {"id": 9, "name": "Binnenland", "slug": "binnenland"},

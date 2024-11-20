@@ -7,6 +7,7 @@
         year: 'numeric'
     };
     import { categoriesData } from "$lib/index.js";
+    import Donationbtn from "./Donationbtn.svelte";
 </script>
 
 <header>
@@ -71,7 +72,7 @@
             </a>
             <ul>
                 <li>Nieuwsbrief</li>
-                <li><button>Doneren</button></li>
+                <li> <Donationbtn/> </li>
                 <li>
                     <a href="/search">
                         <img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" />
@@ -269,15 +270,7 @@
         align-items: center;
     }
 
-    button {
-        background-color: #E85340;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 2px;
-        width: 110px;
-        height: 30px;
-    }
+ 
 
     .boven {
         background-color: black;
