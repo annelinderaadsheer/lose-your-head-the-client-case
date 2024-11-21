@@ -8,6 +8,7 @@
     };
     import { categoriesData } from "$lib/index.js";
     import SearchBar from "$lib/SearchBar.svelte";
+    import NieuwsbriefComponent from '$lib/Nieuwsbrief-component.svelte';
 </script>
 
 <header>
@@ -70,8 +71,9 @@
             <a href="/">
                 <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
             </a>
+            <NieuwsbriefComponent />
             <ul>
-                <li>Nieuwsbrief</li>
+                <NieuwsbriefComponent />
                 <li><button>Doneren</button></li>
                 <li class="groot-search">
                     <SearchBar resultsPage="/search" name="searchterm" placeholder="Zoeken..." />
