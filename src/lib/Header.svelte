@@ -73,7 +73,6 @@
             </a>
             <NieuwsbriefComponent />
             <ul>
-                <NieuwsbriefComponent />
                 <li><button>Doneren</button></li>
                 <li class="groot-search">
                     <SearchBar resultsPage="/search" name="searchterm" placeholder="Zoeken..." />
