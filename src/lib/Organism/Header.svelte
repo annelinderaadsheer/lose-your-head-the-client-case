@@ -199,14 +199,12 @@
     }
 
     .mobile-search {
-        width: 80vw;
-        margin-left: calc(-80vw + 2em);
+        --search-bar-width: 80vw;
         z-index: 3;
     }
 
     .groot-search {
-        width: 20em;
-        margin-left: -18em;
+        --search-bar-width: 20em;
     }
 
     .onder ul {

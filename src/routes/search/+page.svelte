@@ -57,6 +57,7 @@
 
     .search-main {
         max-width: 30em;
+        --search-bar-width: 32.5em;
         margin-left: auto;
         margin-right: auto;
     }

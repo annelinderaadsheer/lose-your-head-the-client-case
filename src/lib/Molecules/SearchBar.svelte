@@ -44,18 +44,19 @@
         display: flex;
         align-items: center;
         justify-content: end;
-        width: 100%;
     }
 
     .search-bar {
-        width: 100%;
+        width: var(--search-bar-width);
+        margin-left: calc(-2px - var(--search-bar-width));
         height: 2.5em;
-        transition: width 500ms;
+        transition: width 500ms, margin-left 500ms;
     }
 
     .closed {
-        border: none;
         width: 0;
+        margin-left: 0;
+        border: none;
     }
 
     button {
