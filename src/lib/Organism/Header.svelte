@@ -8,7 +8,7 @@
     };
     import { categoriesData } from "$lib/index.js";
     import SearchBar from "$lib/Molecules/SearchBar.svelte";
-    import Nieuwsbrief from "../Molecules/Nieuwsbrief.svelte";
+    import Nieuwsbrief from "$lib/Molecules/Nieuwsbrief.svelte";
 </script>
 
 <header>
