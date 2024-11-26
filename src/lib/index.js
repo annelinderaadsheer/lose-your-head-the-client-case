@@ -6,6 +6,10 @@ export { default as Footer } from '$lib/Organism/Footer.svelte'
 
 export { default as Header } from '$lib/Organism/Header.svelte';
 
+export { default as Donatiebox } from '$lib/Molecules/Donatiebox.svelte';
+
+
+
 // This is an array with the data for categories with all the correct id's and slugs
 export const categoriesData = [
     {"id": 9, "name": "Binnenland", "slug": "binnenland"},
