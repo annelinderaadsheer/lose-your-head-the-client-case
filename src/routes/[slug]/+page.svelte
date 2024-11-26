@@ -47,4 +47,14 @@
     article {
         margin-top: 2em;
     }
+
+    :global(.wp-block-gallery, .wp-block-image) {
+        margin: 0;
+        margin-bottom: 1em;
+    }
+    
+    :global(article img) {
+        width: 100%;
+        height: auto;
+    }
 </style>
