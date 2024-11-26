@@ -7,6 +7,7 @@
         year: 'numeric'
     };
     import { categoriesData } from "$lib/index.js";
+    import SearchBar from "$lib/Molecules/SearchBar.svelte";
 </script>
 
 <header>
@@ -14,7 +15,7 @@
         <section class="mobile-header">
             <nav>
                 <div id="menuToggle">
-                    <input type="checkbox"/>
+                    <input type="checkbox" aria-label="Menu"/>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -39,9 +40,9 @@
             <a href="/">
                 <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="150" height="35" />
             </a>
-            <a href="/search" class="mobile-search-icon">
-                <img src="/free-search-icon-2903-thumb.png" alt="Search" width="25" height="25" />
-            </a>
+            <div class="mobile-search">
+                <SearchBar resultsPage="/search" name="searchterm" placeholder="Zoeken..." />
+            </div>
         </section>
 
         <section class="mobile-datum">
@@ -72,10 +73,8 @@
             <ul>
                 <li>Nieuwsbrief</li>
                 <li><button>Doneren</button></li>
-                <li>
-                    <a href="/search">
-                        <img src="/free-search-icon-2903-thumb.png" alt="Search" width="20" height="20" />
-                    </a>
+                <li class="groot-search">
+                    <SearchBar resultsPage="/search" name="searchterm" placeholder="Zoeken..." />
                 </li>
             </ul>
         </section>
@@ -197,6 +196,15 @@
         padding: 10px;
         font-size: smaller;
         border-bottom: 1px solid rgba(154, 154, 154, 0.679);
+    }
+
+    .mobile-search {
+        --search-bar-width: 80vw;
+        z-index: 3;
+    }
+
+    .groot-search {
+        --search-bar-width: 20em;
     }
 
     .onder ul {

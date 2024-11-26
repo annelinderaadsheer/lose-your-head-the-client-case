@@ -22,7 +22,7 @@
 </script>
 
 <footer>
-    <img src="/RedPers_Logo_Cmyk_Black.webp" alt="Red Pers Logo">
+    <img src="/RedPers_Logo_Cmyk_Black.webp" alt="Red Pers Logo" height="48px" width="200px">
     <ul class="footer-layout">
         <li class="kopjes">
             <h3 class="kop-4">RUBRIEKEN</h3>
@@ -90,6 +90,10 @@
         max-width: 200px;
         max-height: 200px;
         margin-bottom: 50px;
+    }
+
+    li {
+        padding: 5px;
     }
 
     .footer-layout {
@@ -194,8 +198,8 @@
         }
 
         footer img {
-            max-width: 100px;
-            max-height: 100px;
+            width: 100px;
+            height: 24px;
             margin-bottom: 20px;
         }
 
