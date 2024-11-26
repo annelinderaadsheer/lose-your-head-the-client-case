@@ -61,7 +61,7 @@
 
     button {
         filter: invert(1);
-        background-color: white;
+        background-color: var(--background-color);
         height: 3em;
         width: 3em;
     }

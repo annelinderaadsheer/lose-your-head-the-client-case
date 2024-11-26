@@ -6,9 +6,25 @@
         weekday: 'long',
         year: 'numeric'
     };
+    const dateFormatSmall = {
+        month: 'short',
+        day: 'numeric',
+        weekday: 'short'
+    }
     import { categoriesData } from "$lib/index.js";
     import SearchBar from "$lib/Molecules/SearchBar.svelte";
     import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
+  import { onMount } from "svelte";
+
+    let sticky = false;
+    
+    function checkScroll() {
+        sticky = window.scrollY > 130;
+    }
+
+    onMount(() => {
+        window.addEventListener("scroll", checkScroll);
+    });
 </script>
 
 <header>
@@ -79,13 +95,19 @@
                 </li>
             </ul>
         </section>
-        <section class="onder">
-            <ul>
-                <li><a href="/">Voorpagina</a></li>
-                {#each categoriesData as category}
-                    <li><a href="/categorie/{category.slug}">{category.name}</a></li>
-                {/each}
-            </ul>
+        <section class="onder" class:sticky={sticky}>
+            <div class="onder-items">
+                <p class="datum-bold uppercase">{(new Date()).toLocaleDateString("nl-NL", dateFormatSmall)}</p>
+                <ul>
+                    <li><a href="/">Voorpagina</a></li>
+                    {#each categoriesData as category}
+                        <li><a href="/categorie/{category.slug}">{category.name}</a></li>
+                    {/each}
+                </ul>
+                <div class="search-sticky">
+                    <SearchBar resultsPage="/search" name="searchterm" placeholder="Zoeken..." />
+                </div>
+            </div>
         </section>
     </div>
 </header>
@@ -183,6 +205,11 @@
     }
 
     .mobile-header {
+        position: fixed;
+        top: 0;
+        width: calc(100vw - 2em);
+        background-color: var(--background-color);
+
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -191,6 +218,8 @@
     }
 
     .mobile-datum {
+        margin-top: 6em;
+        
         display: flex;
         align-items: center;
         justify-content: center;
@@ -208,7 +237,43 @@
         --search-bar-width: 20em;
     }
 
+    .onder {
+        background-color: var(--background-color);
+    }
+    
+    .onder-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: var(--main-width);
+
+        margin: 0 auto;
+    }
+
+    .onder .datum-bold {
+        display: none;
+    }
+
+    .search-sticky {
+        display: none;
+        --search-bar-width: 15em;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        border-bottom: 1px solid var(--light-border-color);
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .sticky .datum-bold {
+        display: block;
+    }
+
     .onder ul {
+        width: 100%;
+        height: 100%;
         display: flex;
         align-items: center;
         padding: 15px;
@@ -223,9 +288,18 @@
 
     .midden {
         display: flex;
+        background-color: var(--background-color);
         align-items: center;
         padding: 20px;
         justify-content: space-between;
+    }
+
+    .sticky .search-sticky {
+        display: block;
+    }
+
+    .sticky ul {
+        border: none;
     }
 
     .midden ul {
@@ -253,6 +327,7 @@
 
     .datum-bold {
         font-weight: bold;
+        text-wrap: nowrap;
     }
 
     ul {
@@ -299,7 +374,7 @@
         font-size: 14px;
     }
 
-    @media (max-width: 786px) {
+    @media (max-width: 900px) {
         .groot-scherm {
             display: none;
         }
@@ -309,7 +384,7 @@
         }
     }
 
-    @media (min-width: 786px) {
+    @media (min-width: 900px) {
         .klein-scherm {
             display: none;
         }
