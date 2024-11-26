@@ -8,6 +8,7 @@
     };
     import { categoriesData } from "$lib/index.js";
     import SearchBar from "$lib/Molecules/SearchBar.svelte";
+    import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
 </script>
 
 <header>
@@ -72,7 +73,7 @@
             </a>
             <ul>
                 <li>Nieuwsbrief</li>
-                <li><button>Doneren</button></li>
+                <li><Donatiebtn /></li>
                 <li class="groot-search">
                     <SearchBar resultsPage="/search" name="searchterm" placeholder="Zoeken..." />
                 </li>
@@ -275,16 +276,6 @@
     ul li {
         display: flex;
         align-items: center;
-    }
-
-    button {
-        background-color: #E85340;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 2px;
-        width: 110px;
-        height: 30px;
     }
 
     .boven {
