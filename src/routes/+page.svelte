@@ -12,7 +12,7 @@
     import Artikel from '$lib/Artikel.svelte';
 </script>
 
-<Header/>
+<!-- <Header/> -->
 
 <main>
     {#if data.posts}
@@ -26,7 +26,7 @@
     {/if}
 </main>
 
-<Footer />
+<!-- <Footer /> -->
 
 <style>
     main {
