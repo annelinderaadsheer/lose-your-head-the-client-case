@@ -11,16 +11,24 @@
     const post = data.posts[0];
     import Makersblok from '$lib/Molecules/Makersblok.svelte';
     import Donatiebox from '$lib/Molecules/Donatiebox.svelte';
+    import ArtikelTools from '../../lib/Molecules/ArtikelTools.svelte';
+
+    let fontSizeBig = false;
+
+    function changeFontSize() {
+        fontSizeBig = !fontSizeBig; // flip value of fontSizeBig
+    }
 </script>
 
 <Header/>
 <ArtikelInfoframe post={post}></ArtikelInfoframe>
 
 <main>
+    <ArtikelTools changeFontSizeFunction={changeFontSize}></ArtikelTools>
     {#if post}
     <!-- @html means: there is html in this string, render it -->
     <article>
-        <p>{@html post.content.rendered} </p>
+        <p class:large={fontSizeBig}>{@html post.content.rendered} </p>
         <Makersblok author={post.authors[0]}></Makersblok>
     </article>
   
@@ -38,14 +46,13 @@
 <Footer/>
 
 <style>
-
     main {
         max-width: var(--article-width);
         padding: 0 1em;
     }
 
-    article {
-        margin-top: 2em;
+    .large {
+        font-size: large;
     }
 
     :global(.wp-block-gallery, .wp-block-image) {
