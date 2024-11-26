@@ -10,6 +10,7 @@
     // Check if the data has been received and is an array
     const post = data.posts[0];
     import Makersblok from '$lib/Molecules/Makersblok.svelte';
+    import Donatiebox from '$lib/Molecules/Donatiebox.svelte';
 </script>
 
 <Header/>
@@ -27,7 +28,11 @@
     <p>No post available</p>
 {/if}
 
-<ArtikelKlein data={data}/>
+<Donatiebox />
+
+<!-- <ArtikelKlein data={data}/> -->
+
+
 </main>
 
 <Footer/>
