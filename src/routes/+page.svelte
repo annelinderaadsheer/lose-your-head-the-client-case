@@ -7,9 +7,9 @@
         day: 'numeric',
     };
     
-    import Footer from '$lib/Footer.svelte';
-    import Header from '$lib/Header.svelte';
-    import Artikel from '$lib/Artikel.svelte';
+    import Footer from '$lib/Organism/Footer.svelte';
+    import Header from '$lib/Organism/Header.svelte';
+    import Artikel from '$lib/Organism/Artikel.svelte';
 
 </script>
 
