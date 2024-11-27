@@ -38,6 +38,9 @@
     
     --line-length: 75ch;
     --line-heigth: 30px;
+
+    /* HOVER TRANSITIONS */
+    --hover: 0.4s;
 }
 
 /* #region Fonts */

@@ -17,16 +17,16 @@
 </script>
 
 <div class="artikel-tools">
-    <button class="listen"><img src="/Play.svg" alt="Play icon">Artikel beluisteren</button>
+    <button class="listen"><img src="/Play.svg" alt="Play">Artikel beluisteren</button>
     <ul>
         <li>
-            <button><img src="/Vector2.svg" alt="Save icon"></button>
+            <button><img src="/Vector2.svg" alt="Opslaan"></button>
         </li>
         <li>
-            <button on:click={share}><img src="/Vector.svg" alt="share-icon"></button>
+            <button on:click={share}><img src="/Vector.svg" alt="Delen"></button>
         </li>
         <li>
-            <button on:click={changeFontSizeFunction}><img src="/Light.svg" alt="Text icon"></button>
+            <button on:click={changeFontSizeFunction}><img src="/Light.svg" alt="Vergroot text"></button>
         </li>
     </ul>
 </div>
@@ -64,6 +64,7 @@
 
     button:hover {
         filter: invert(1);
+        transition: var(--hover);
     }
 
     img {
