@@ -9,6 +9,9 @@
     
     import Footer from '$lib/Organism/Footer.svelte';
     import Header from '$lib/Organism/Header.svelte';
+    import Artikel from '$lib/Organism/Artikel.svelte';
+    import Donatiebtn from '$lib/Molecules/Donatiebtn.svelte';
+
 </script>
 
 <Header/>
@@ -17,14 +20,7 @@
     {#if data.posts}
         {#each data.posts as post}
             <!-- @html means: there is html in this string, render it -->
-            <a href="/{post.slug}">
-                <h3>{@html post.title.rendered}</h3>
-            </a>
-            <p>{@html post.excerpt.rendered}</p>
-            <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding">
-            <p>{(new Date(post.date)).toLocaleDateString("nl-NL", dateFormat)}</p>
-            <p>{post.yoast_head_json.twitter_misc["Geschatte leestijd"]}</p>
-            <p>{post.yoast_head_json.author}</p>
+            <Artikel post={post} />
         {/each}
     {:else}
         <!-- This will show if no posts are available -->
@@ -35,8 +31,11 @@
 <Footer />
 
 <style>
-    img {
-        max-width: 100%;
-        height: auto;
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        margin-top: 1em;
+        justify-content: center;
     }
 </style>
