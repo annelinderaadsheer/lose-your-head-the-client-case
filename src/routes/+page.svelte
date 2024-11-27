@@ -14,7 +14,7 @@
 
 </script>
 
-<!-- <Header/> -->
+<Header/>
 
 <div class="background">
     <main>
@@ -34,7 +34,7 @@
     </main>
 </div>
 
-<!-- <Footer /> -->
+<Footer />
 
 <style>
     .background {
