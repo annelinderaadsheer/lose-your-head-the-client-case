@@ -3,7 +3,7 @@
 </button>
 
 <div popover="auto" id="donation" class="popup">
-    <button popovertarget="donation" popovertargetaction="hide" class="close-button" aria-label="Sluit">X</button>
+    <button popovertarget="donation" popovertargetaction="hide" class="close-button" aria-label="Sluit">x</button>
     <h2>Doneren</h2>
     <p>Wij bieden jonge, aspirerende journalisten een podium en begeleiding. Dat kunnen we nog beter met jouw steun. Die steun komt met twee voor de prijs van een, want onze sponsor matcht jouw donatie, Geef jij ons vijf euro? Dan ontvangen wij een tientje.</p>
     <fieldset>
@@ -32,31 +32,33 @@
 
 <style>
     h2 {
-        font-weight: bolder;
-        margin-top: 15px;
-        margin-bottom: 30px;
-        font-size: 42px;
+        font-size: 3.2rem;
+        margin: 0.2rem 0.2rem;
+        text-align: left;
+        margin-bottom: 2rem;
+        font-family: 'Source serif 4';
     }
 
     p {
-        color: #6b6b6b;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
+        color: #757575;
+        font-size: 1rem;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
     }
 
     fieldset {
         all: unset;
         padding: 0;
-        font-weight: bolder;
     }
 
     .popup {
-        background-color: #f2f2f2;
-        outline: 1px solid black;
-        width: 440px;
-        overflow: hidden;
-        height: 260px;
+        background-color: white;
+        border: 2px solid black;
+        padding: 4rem;
+        max-width: 500px;
         position: relative;
-        padding: 50px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .donation-button {
@@ -96,31 +98,36 @@
         margin-bottom: 10px; 
     }
 
-    .amount-options label{
+    .amount-options label {
         width: 95px;
+        font-size: 1rem;
     }
 
     label {
         display: inline-block;
         padding: 8px 16px;
-        background-color: #fff;
-        color: #000;
-        border: 2px solid #000;
-        font-size: 16px;
+        background-color: black;
+        color: white;
+        /* padding: 1rem 1.5rem; */
         cursor: pointer;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        width: 100%;
+        border-radius: 2px;
         text-align: center;
         transition: all 0.3s ease;
     }
 
     label:hover,
     label:focus-within {
-        background-color: #000000;
-        color: white;
+        background-color: #D5302D;
+        transition: background-color 0.3s ease;
     }
 
     .other {
-        width: 405px;
         height: 20px;
+        width: 100%;
+        font-size: 1rem;
     }
 
     .close-button {
