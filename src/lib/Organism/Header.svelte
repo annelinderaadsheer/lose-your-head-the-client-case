@@ -90,7 +90,7 @@
             </a>
             <ul>
 
-                <li>Nieuwsbrief</li>
+                <li><Nieuwsbrief /></li>
                 <li><Donatiebtn /></li>
                 <li class="groot-search">
                     <SearchBar resultsPage="/search" name="searchterm" placeholder="Zoeken..." />
