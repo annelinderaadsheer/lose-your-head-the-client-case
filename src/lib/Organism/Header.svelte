@@ -13,6 +13,7 @@
     }
     import { categoriesData } from "$lib/index.js";
     import SearchBar from "$lib/Molecules/SearchBar.svelte";
+    import Nieuwsbrief from "$lib/Molecules/Nieuwsbrief.svelte";
     import Donatiebtn from "$lib/Molecules/Donatiebtn.svelte";
   import { onMount } from "svelte";
 
@@ -88,6 +89,7 @@
                 <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
             </a>
             <ul>
+
                 <li>Nieuwsbrief</li>
                 <li><Donatiebtn /></li>
                 <li class="groot-search">
