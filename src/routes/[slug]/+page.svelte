@@ -8,7 +8,7 @@
     export let data;
     
     // Check if the data has been received and is an array
-    const post = data.posts[0];
+    const post = data.post;
     import Makersblok from '$lib/Molecules/Makersblok.svelte';
     import Donatiebox from '$lib/Molecules/Donatiebox.svelte';
     import ArtikelTools from '../../lib/Molecules/ArtikelTools.svelte';
@@ -29,6 +29,8 @@
     <!-- @html means: there is html in this string, render it -->
     <article>
         <p class:large={fontSizeBig}>{@html post.content.rendered} </p>
+        <Donatiebox />
+        <h2>Dit artikel werd geschreven door</h2>
         <Makersblok author={post.authors[0]}></Makersblok>
     </article>
   
@@ -36,10 +38,10 @@
     <p>No post available</p>
 {/if}
 
-<Donatiebox />
-
-<!-- <ArtikelKlein data={data}/> -->
-
+<h2>Meer van {post.authors[0].display_name}</h2>
+<ArtikelKlein posts={data.authorPosts}/>
+<h2>Meer van Red Pers</h2>
+<ArtikelKlein posts={data.additionalPosts}/>
 
 </main>
 
@@ -53,6 +55,10 @@
 
     .large {
         font-size: large;
+    }
+
+    article {
+        margin-bottom: 5em;
     }
 
     :global(.wp-block-gallery, .wp-block-image) {
