@@ -240,6 +240,8 @@
 
     .onder {
         background-color: var(--background-color);
+        border-bottom: 1px solid #ddd;
+        border-top: 1px solid #ddd;
     }
     
     .onder-items {
@@ -281,8 +283,6 @@
         justify-content: center;
         gap: 20px;
         list-style: none;
-        border-bottom: 1px solid #ddd;
-        border-top: 1px solid #ddd;
         font-family: var(--menu-item);
         font-size: 14px;
     }
