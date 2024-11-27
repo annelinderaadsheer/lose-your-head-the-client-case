@@ -9,7 +9,7 @@
 
 <a href="/{post.slug}">
     <article class="article">
-        <img src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding" width="25em" height="15em">
+        <img loading="lazy" src={post.yoast_head_json.og_image[0].url} alt="Artikel afbeelding" width="25em" height="15em">
         <div class="title-info-text">
             <div class="title">
                 <h1 class="artikel-kop">{@html post.title.rendered}</h1>
@@ -20,7 +20,7 @@
                     <span class="reading-time">
                         <span aria-hidden="true">&minus;</span>
                         <abbr title="Geschatte leestijd">
-                            {post.yoast_head_json.twitter_misc["Geschatte leestijd"].replace("minuten", "")}
+                            {post.yoast_head_json.twitter_misc["Geschatte leestijd"]?.replace("minuten", "")}
                             <span aria-label="minuten">min</span>
                         </abbr>
                     </span>
@@ -39,6 +39,7 @@
         max-width: 25em;
         width: 100vw;
         border: var(--border);
+        background-color: var(--background-color);
     }
 
     img {
