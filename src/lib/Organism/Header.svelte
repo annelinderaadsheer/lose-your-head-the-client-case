@@ -89,7 +89,6 @@
                 <img src="/RedPers_Logo_Cmyk_Black (1).webp" alt="RedPers logo" width="160" height="40" />
             </a>
             <ul>
-
                 <li><Nieuwsbrief /></li>
                 <li><Donatiebtn /></li>
                 <li class="groot-search">
