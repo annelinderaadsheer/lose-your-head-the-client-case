@@ -76,6 +76,69 @@
     #popup-toggle {
         display: none;
     }
+
+    /* Media Queries */
+    @media (max-width: 1024px) {
+        .popup {
+            padding: 3rem;
+            max-width: 450px;
+        }
+
+        .popup h2 {
+            font-size: 2.8rem;
+        }
+
+        .popup p {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .subscribe-btn {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .popup {
+            padding: 2rem;
+            max-width: 400px;
+        }
+
+        .popup h2 {
+            font-size: 2.4rem;
+        }
+
+        .popup p {
+            font-size: 0.9rem;
+            line-height: 1.3;
+        }
+
+        .subscribe-btn {
+            font-size: 1rem;
+            padding: 0.8rem 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .popup {
+            padding: 1.5rem;
+            max-width: 90%;
+        }
+
+        .popup h2 {
+            font-size: 2rem;
+        }
+
+        .popup p {
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+
+        .subscribe-btn {
+            font-size: 0.9rem;
+            padding: 0.6rem 1rem;
+        }
+    }
 </style>
 
 <input type="checkbox" id="popup-toggle">
