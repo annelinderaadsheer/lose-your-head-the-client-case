@@ -73,6 +73,11 @@ button{
     margin-bottom: 50px;
 }
 
+button:hover{
+    background-color: var(--red-main);
+    color: var(--red-main-lightest);
+}
+
 @media (min-width: 530px) {
     .donatie-bedragen button {
         padding: 10px;

@@ -292,7 +292,8 @@
         display: flex;
         background-color: var(--background-color);
         align-items: center;
-        padding: 20px;
+        padding: 10px;
+        margin-left: 10px;
         justify-content: space-between;
     }
 
