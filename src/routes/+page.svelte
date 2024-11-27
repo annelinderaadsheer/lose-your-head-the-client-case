@@ -10,6 +10,7 @@
     import Footer from '$lib/Organism/Footer.svelte';
     import Header from '$lib/Organism/Header.svelte';
     import Artikel from '$lib/Organism/Artikel.svelte';
+    import Donatiebtn from '$lib/Molecules/Donatiebtn.svelte';
 
 </script>
 

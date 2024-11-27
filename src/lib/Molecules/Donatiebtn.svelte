@@ -33,8 +33,8 @@
 <style>
     h2 {
         font-weight: bolder;
-        margin-top: -5px;
-        margin-bottom: 10px;
+        margin-top: 15px;
+        margin-bottom: 30px;
         font-size: 42px;
     }
 
@@ -63,7 +63,7 @@
         all: unset;
         --btn-color: #8a0000;
         --btn-text: #ffffff;
-        background-color: var(--btn-color);
+        background-color: var(--accent-color1);
         border-radius: 2px;
         color: var(--btn-text);
         cursor: pointer;
@@ -331,8 +331,5 @@
 .popup {
     animation: popup-zoom 0.6s ease-out, popup-shake 0.3s ease 0.3s;
 }
-
-
-
 
 </style>
