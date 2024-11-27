@@ -344,11 +344,12 @@
     .boven li:hover {
     color: #000000;
     background-color: #f0f0f0;
+    transition: var(--hover);
     }
 
     ul a:hover {
     color: #ff0000;
-    background-color: #f0f0f0;
+    transition: var(--hover);
     }
 
     ul li {
