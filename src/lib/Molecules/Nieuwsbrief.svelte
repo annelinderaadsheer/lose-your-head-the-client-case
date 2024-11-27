@@ -3,7 +3,6 @@
         cursor: pointer;
         display: block;
         margin: 2rem auto;
-        z-index: 1000;
     }
 
     .overlay {

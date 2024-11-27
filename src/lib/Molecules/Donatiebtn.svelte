@@ -140,7 +140,6 @@
         color: #000;
         cursor: pointer;
         padding: 5px;
-        z-index: 10;
     }
 
     .close-button:hover {
