@@ -32,11 +32,13 @@ h3{
 p{
     color: var(--red-main);
     padding: 20px;
+    font-weight: bold;
 }
 
 button{
     background-color: var(--red-main-light);
     color: var(--red-main);
+    font-weight: bolder;
 }
 
 .donatiebox{
@@ -65,6 +67,10 @@ button{
 .andere-donatie button{
     width: calc(4 * 25%);
     padding: 10px;
+}
+
+.donatiebox{
+    margin-bottom: 50px;
 }
 
 @media (min-width: 530px) {
