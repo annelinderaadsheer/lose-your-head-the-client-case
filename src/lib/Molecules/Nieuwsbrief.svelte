@@ -108,12 +108,12 @@
         }
 
         .popup p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             line-height: 1.3;
         }
 
         .subscribe-btn {
-            font-size: 1rem;
+            font-size: 0.8rem;
             padding: 0.8rem 1.2rem;
         }
     }
@@ -121,7 +121,7 @@
     @media (max-width: 480px) {
         .popup {
             padding: 1.5rem;
-            max-width: 90%;
+            max-width: 350px;
         }
 
         .popup h2 {
@@ -129,12 +129,12 @@
         }
 
         .popup p {
-            font-size: 0.8rem;
+            font-size: 0.6rem;
             line-height: 1.2;
         }
 
         .subscribe-btn {
-            font-size: 0.9rem;
+            font-size: 0.6rem;
             padding: 0.6rem 1rem;
         }
     }
